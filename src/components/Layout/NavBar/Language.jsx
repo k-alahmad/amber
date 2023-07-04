@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
+import { RiEnglishInput } from "react-icons/Ri";
+import { IoIosArrowDown } from "react-icons/io";
 import {
 	MdLanguage,
 	MdRadioButtonChecked,
@@ -33,10 +34,14 @@ export default function Dropdown() {
 			<div className='relative'>
 				<div
 					style={{ WebkitTapHighlightColor: "transparent" }}
-					className='text-purple p-0 m-0 px-8 cursor-pointer'
+					className=' p-0 m-0 px-8 cursor-pointer'
 					onClick={() => setOpen(!open)}
 				>
-					<MdLanguage size={24} color='#222222' />
+					{/* <RiEnglishInput size={20} color='#3b3b3b' /> */}
+					<div className='flex border-r-2 border-lightGreyOP'>
+						<p className='text-lightBlack block px-2'>En</p>
+						<IoIosArrowDown size={24} color='#3b3b3b' className='mx-2' />
+					</div>
 				</div>
 
 				<div

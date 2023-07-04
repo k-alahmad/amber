@@ -20,6 +20,7 @@ export default {
 				camera: "camera 15s ease-in-out infinite",
 			},
 			fontSize: {
+				ExtraHuge: "108px",
 				huge: "87px",
 				mobileHuge: "60px",
 				bigger: "70px",

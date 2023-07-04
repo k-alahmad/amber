@@ -7,6 +7,7 @@ import Dropdown from "./Language";
 import { MdDehaze } from "react-icons/md";
 import Riverside from "../../../assets/images/330Riverside.png";
 import LazyImage from "../../UI/LazyImage";
+import { FaPlus } from "react-icons/fa";
 const NavBar = () => {
 	const { t, i18n } = useTranslation();
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -42,14 +43,18 @@ const NavBar = () => {
 							: "w-full  translate-y-0"
 					}   border-white border-2  bg-white transition-all duration-300 z-40 fixed`}
 				>
-					<div className={`flex justify-between items-center`}>
+					<div className={`flex justify-between items-center h-16`}>
 						<div className='flex-1 flex justify-start items-center'>
-							<div className='flex justify-center items-center'>
-								<img
+							<div className='flex justify-center items-center px-[3%] '>
+								{/* <img
 									className='h-[80px] sm:h-[80px]  cursor-pointer md:px-14'
 									src={Logo}
 									alt='LOGO'
-								/>
+								/> */}
+								<FaPlus color='#222222' className='animate-pulse ' />
+								<p className='text-lightBlack text-tiny font-normal uppercase leading-[14.4px] tracking-[2.4px] pl-4 cursor-pointer'>
+									Register Now
+								</p>
 							</div>
 
 							{/* {elements.map((e) => (
@@ -67,7 +72,7 @@ const NavBar = () => {
 						<p className='-mr-6 text-lightBlack'>Menu</p>
 						<div
 							onClick={() => setMobileOpen(true)}
-							className='text-purple px-8 block cursor-pointer'
+							className=' px-8 block cursor-pointer'
 						>
 							<MdDehaze size={24} color='#222222' />
 						</div>
