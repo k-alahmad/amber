@@ -5,23 +5,22 @@ import heroMiddle from "../../../assets/images/heroMiddle.webp";
 import heroRight from "../../../assets/images/heroRight.webp";
 import Riverside from "../../../assets/images/330Riverside.svg";
 import HeroBottom from "../../../assets/images/photo3.webp";
-import Eclips from "../../../assets/images/Ellipse.svg";
+import { useTranslation } from "react-i18next";
 const Header = () => {
+	const { i18n, t } = useTranslation();
+
 	return (
-		<div className='px-[3%] '>
-			<div className='grid grid-cols-3 border-t-2 space-x-8 border-lightGreyOP'>
+		<div className='invisible md:visible px-[3%] '>
+			<div className=' grid grid-cols-3 border-t-2 space-x-8 border-lightGreyOP'>
 				<div className='flex flex-col justify-start space-y-2 pt-4 border-r-2 border-lightGreyOP'>
-					<p className='flex  flex-col w-[80%] justify-center  flex-shrink-0 text-lightBlack text-big font-bold capitalize leading-[110%]'>
-						Unveil a <br></br> soul-stirring experience
-					</p>
-					<p className='flex  flex-col justify-center flex-shrink-0 w-[448px] text-tiny leading-[163%] capitalize tracking-[0.28px] text-greyText pb-36'>
-						as you surrender to the enchanting call of the water in your vicini
-					</p>
-					{/* <LazyImage
-						src={Eclips}
-						alt='eclips'
-						imgStyle={"relative object-right w-[150px] h-[150px] "}
-					/> */}
+					<div dir={i18n.language == "en" ? "" : "rtl"} className='px-4'>
+						<p className='flex  flex-col w-[80%] justify-center  flex-shrink-0 text-lightBlack text-big font-bold capitalize leading-[110%]'>
+							{t("HeaderTitleOne")}
+						</p>
+						<p className='flex  flex-col justify-center flex-shrink-0 w-[448px] text-tiny leading-[163%] capitalize tracking-[0.28px] text-greyText pb-36'>
+							{t("HeaderSubTitleOne")}
+						</p>
+					</div>
 
 					<div className='flex flex-shrink-0 overflow-hidden w-[100%]  h-[950px]'>
 						<LazyImage
@@ -30,7 +29,6 @@ const Header = () => {
 							imgStyle={"relative object-cover w-[200%] h-full animate-camera"}
 						/>
 						<div className='flex absolute  ml-[18%] 2xl:ml-[18%] -translate-y-1/2 w-[150px] h-[150px] rounded-[150px] bg-gradient-to-b from-[#bebebe]/50 backdrop-blur-md ' />
-						{/* backdrop-blur-sm bg-gradient-to-b from-[#d4d3d3] from-0% via-[#bebebe] via-50% to-[#979797] to-90%  */}
 					</div>
 				</div>
 				<div className=' flex flex-col '>
@@ -80,7 +78,7 @@ const Header = () => {
 				</div>
 			</div>
 			<div>
-				<p className='text-[#222222] font-bold text-ExtraHuge flex  flex-col justify-center capitalize leading-[100%] tracking-[0.28px] text-center whitespace-nowrap  -translate-y-80'>
+				<p className='text-[#222222] font-bold text-ExtraHuge flex overflow-hidden flex-col justify-center capitalize leading-[100%] tracking-[0.28px] text-center whitespace-nowrap  -translate-y-80'>
 					Specially Desingned Residences
 				</p>
 			</div>

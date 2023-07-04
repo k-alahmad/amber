@@ -40,17 +40,12 @@ const NavBar = () => {
 					className={`${
 						header
 							? "shadow-2xl rounded-2xl w-[80%] translate-y-2"
-							: "w-full  translate-y-0"
+							: "w-[80%]   translate-y-0"
 					}   border-white border-2  bg-white transition-all duration-300 z-40 fixed`}
 				>
 					<div className={`flex justify-between items-center h-16`}>
 						<div className='flex-1 flex justify-start items-center'>
 							<div className='flex justify-center items-center px-[3%] '>
-								{/* <img
-									className='h-[80px] sm:h-[80px]  cursor-pointer md:px-14'
-									src={Logo}
-									alt='LOGO'
-								/> */}
 								<FaPlus color='#222222' className='animate-pulse ' />
 								<p className='text-lightBlack text-tiny font-normal uppercase leading-[14.4px] tracking-[2.4px] pl-4 cursor-pointer'>
 									Register Now
