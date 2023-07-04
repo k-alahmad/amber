@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-// "0% ": { left: "100%", top: "0px" },
-// "50% ": { left: "200%", top: "0px" },
-// "100% ": { left: "0%", top: "0px" },
+
 const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -21,7 +19,7 @@ export default {
 			},
 			fontSize: {
 				ExtraHuge: "108px",
-				huge: "87px",
+				huge: "80px",
 				mobileHuge: "60px",
 				bigger: "70px",
 				big: "44px",

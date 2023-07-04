@@ -60,26 +60,28 @@ const Header = () => {
 			</div>
 			<div className=''>
 				<div className='grid grid-cols-3 space-x-8'>
-					<div className='flex flex-col justify-start space-y-2 pt-16 border-r-2 border-lightGreyOP'>
+					<div
+						dir={i18n.language == "en" ? "" : "rtl"}
+						className='flex flex-col justify-start px-[3%]  space-y-2 pt-16 border-r-2 border-lightGreyOP'
+					>
 						<p className='flex  flex-col w-[80%] justify-center  flex-shrink-0 text-lightBlack text-big font-bold capitalize leading-[110%]'>
-							A spectacular sight that delights
+							{t("HeaderTitleTwo")}
 						</p>
-						<p className='flex  flex-col justify-center flex-shrink-0 w-[448px] text-tiny leading-[163%] capitalize tracking-[0.28px] text-greyText pb-40'>
-							Designed like a tapered crescent, catch the reflected hues of the
-							cluster, dazzle in the reflections of the crystal-clear water as
-							you unwind in luxury
+						<p className='flex  flex-col justify-center  flex-shrink-0 text-tiny leading-[163%] capitalize tracking-[0.28px] text-greyText pb-40'>
+							{t("HeaderSubTitleTwo")}
 						</p>
 					</div>
 					<div className='flex flex-col col-span-2'>
-						<div className='flex flex-shrink-0 overflow-hidden w-[100%] -translate-y-56 '>
+						<div className='flex flex-shrink-0  w-[100%] -translate-y-56 '>
 							<LazyImage src={HeroBottom} imgStyle={"relative object-cover"} />
+							<div className='flex absolute bottom-0  w-[53%] h-[120px] bg-gradient-to-b from-white/50 backdrop-blur-sm ' />
 						</div>
 					</div>
 				</div>
 			</div>
-			<div>
-				<p className='text-[#222222] font-bold text-ExtraHuge flex overflow-hidden flex-col justify-center capitalize leading-[100%] tracking-[0.28px] text-center whitespace-nowrap  -translate-y-80'>
-					Specially Desingned Residences
+			<div className=''>
+				<p className='text-[#222222] font-semibold 2xl:text-ExtraHuge text-huge flex overflow-x-clip flex-col justify-center capitalize leading-[100%] tracking-[0.2px] text-center whitespace-nowrap 2xl:-translate-y-[340px]  -translate-y-[320px]'>
+					{t("HeaderMainTitle")}
 				</p>
 			</div>
 		</div>

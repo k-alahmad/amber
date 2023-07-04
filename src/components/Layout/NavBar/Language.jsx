@@ -39,7 +39,7 @@ export default function Dropdown() {
 				>
 					{/* <RiEnglishInput size={20} color='#3b3b3b' /> */}
 					<div className='flex border-r-2 border-lightGreyOP'>
-						<p className='text-lightBlack block px-2'>En</p>
+						<p className='text-lightBlack block px-2'>{t("code")}</p>
 						<IoIosArrowDown size={24} color='#3b3b3b' className='mx-2' />
 					</div>
 				</div>
@@ -81,6 +81,21 @@ export default function Dropdown() {
 							)}
 						</div>
 						<p className='text-lightBlack cursor-pointer'>{t("Arabic")}</p>
+					</div>
+					<div
+						className='flex justify-start items-center'
+						onClick={() => {
+							changeLanguage("fa");
+						}}
+					>
+						<div className='px-2 cursor-pointer'>
+							{i18n.language === "fa" ? (
+								<MdRadioButtonChecked size={24} />
+							) : (
+								<MdRadioButtonUnchecked size={24} />
+							)}
+						</div>
+						<p className='text-lightBlack cursor-pointer'>{t("Persian")}</p>
 					</div>
 				</div>
 			</div>

@@ -48,7 +48,7 @@ const NavBar = () => {
 							<div className='flex justify-center items-center px-[3%] '>
 								<FaPlus color='#222222' className='animate-pulse ' />
 								<p className='text-lightBlack text-tiny font-normal uppercase leading-[14.4px] tracking-[2.4px] pl-4 cursor-pointer'>
-									Register Now
+									{t("register")}
 								</p>
 							</div>
 
@@ -64,7 +64,7 @@ const NavBar = () => {
 
 						<Dropdown />
 
-						<p className='-mr-6 text-lightBlack'>Menu</p>
+						<p className='-mr-6 text-lightBlack'>{t("menu")}</p>
 						<div
 							onClick={() => setMobileOpen(true)}
 							className=' px-8 block cursor-pointer'
