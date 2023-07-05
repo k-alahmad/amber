@@ -37,14 +37,14 @@ const CustomInput = ({ icon, placeholder, name, onChange }) => {
 const Register = () => {
   return (
     <div className="bg-[#F3F3F3] md:grid md:grid-cols-12">
-      <div className="col-span-8 p-8 lg:grid lg:grid-cols-12 pt-20 gap-6">
-        <div className="col-span-6">
+      <div className="col-span-8 p-8 px-12 lg:px-16 lg:grid lg:grid-cols-12 pt-20 gap-6">
+        <div className="col-span-6 space-y-6">
           <p className="font-bold text-huge">Find Your Happy Place</p>
           <p className="font-light text-small">
             Find solace in the undisturbed calmness of the surrounding green
             parks and tree-lined walkways.
           </p>
-          <div className="space-y-6 pt-12">
+          <div className="space-y-6 pt-8">
             <SocialElement
               icon={<MdLocationOn className="text-white" />}
               name={"Address - Street - District Building No"}

@@ -14,9 +14,9 @@ export default {
           "100% ": { "object-position": "left" },
         },
         textCamera: {
-          "0% ": { left: "75%" },
-          "50% ": { left: "-75%" },
-          "100% ": { left: "75%" },
+          "0% ": { left: "50%" },
+          "50% ": { left: "-50%" },
+          "100% ": { left: "50%" },
         },
       },
       animation: {
