@@ -6,19 +6,21 @@ import PaymentPlan from "./components/PaymentPlan";
 import Register from "./components/Register";
 import Location from "./components/Location";
 import HeaderTemp from "./components/HeaderTemp";
+import Brochure from "./components/Brochure";
 
 const Home = () => {
-  return (
-    <div>
-      {/* <Header /> */}
-      <HeaderTemp />
-      <Nearby />
-      <Location />
-      {/* <FloorPlan /> */}
-      <PaymentPlan />
-      <Register />
-    </div>
-  );
+	return (
+		<div>
+			{/* <Header /> */}
+			<HeaderTemp />
+			<Nearby />
+			<Location />
+			{/* <FloorPlan /> */}
+			<PaymentPlan />
+			<Register />
+			<Brochure />
+		</div>
+	);
 };
 
 export default Home;
