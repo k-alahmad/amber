@@ -25,14 +25,14 @@ const Location = () => {
   return (
     <div>
       <div className="text-9xl text-center bg-transparent text-black my-14 ">
-        <p>
+        <p className="overflow-hidden">
           Site
-          <span className="border-text text-transparent">Location</span>
+          <span className="border-text text-transparent ">Location</span>
           MasterPlan
         </p>
       </div>
       <div className="grid grid-cols-12">
-        <div className="lg:translate-x-16 col-span-4 space-y-8">
+        <div className="lg:translate-x-16 col-span-4 space-y-8 ">
           <p className="font-bold text-[44px]">Site Location Masterplan</p>
           <Element color={"#27AE60"} name={"Apartment Club House"} />
           <Element color={"#D35400"} name={"Lagoon"} />
