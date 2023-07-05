@@ -37,7 +37,7 @@ const Nearby = () => {
           infinite: false,
           dots: true,
           beforeChange: (prev, next) => {
-            setCurrentSlide(next == 0 ? next : Math.round(next / 3));
+            setCurrentSlide(next == 0 ? next : Math.round(next / 2));
           },
         },
       },
@@ -51,17 +51,17 @@ const Nearby = () => {
           infinite: false,
           dots: true,
           beforeChange: (prev, next) => {
-            setCurrentSlide(next == 0 ? next : Math.round(next / 3));
+            setCurrentSlide(next == 0 ? next : Math.round(next / 1));
           },
         },
       },
       {
         breakpoint: 1025,
         settings: {
-          className: "w-full px-[3%]",
+          className: "w-full",
           slidesToShow: 4,
           slidesToScroll: 4,
-          rows: 1,
+          // rows: 1,
           infinite: false,
           dots: true,
           beforeChange: (prev, next) => {
@@ -72,7 +72,7 @@ const Nearby = () => {
       {
         breakpoint: 730,
         settings: {
-          className: "w-full px-[3%]",
+          className: "w-full",
           slidesToShow: 3,
           slidesToScroll: 3,
           rows: 1,
@@ -86,14 +86,14 @@ const Nearby = () => {
       {
         breakpoint: 532,
         settings: {
-          className: "w-full px-[3%]",
+          className: "w-full",
           slidesToShow: 2,
           slidesToScroll: 2,
           rows: 1,
           infinite: false,
           dots: true,
           beforeChange: (prev, next) => {
-            setCurrentSlide(next == 0 ? next : Math.round(next / 3));
+            setCurrentSlide(next == 0 ? next : Math.round(next / 2));
           },
         },
       },
@@ -103,11 +103,11 @@ const Nearby = () => {
 
     customPaging: (index) => {
       return index == currentSlide ? (
-        <div key={index} className="text-[white]">
+        <div key={index} className="text-[white] text-med">
           <FiberManualRecordIcon />
         </div>
       ) : (
-        <div key={index} className="text-[white]">
+        <div key={index} className="text-[white] text-med">
           <OutFiberManualRecordIcon />
         </div>
       );
@@ -168,7 +168,7 @@ const Nearby = () => {
       <div className="border-r-[1px] border-white/20" />
       <div className="border-r-[1px] border-white/20" />
       <div className="absolute h-full w-full text-white lg:grid lg:grid-cols-12">
-        <div className="lg:px-10 xl:px-16 col-span-5 py-7">
+        <div className="lg:px-10 xl:px-16 col-span-5 py-7 max-lg:px-8">
           <p className="font-bold text-huge">EASY ACCESS TO KEY LANDMARKS</p>
           <p className="text-white/60 font-light text-small">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
@@ -178,7 +178,7 @@ const Nearby = () => {
           </p>
 
           <div className="py-5 lg:py-16 max-w-full flex justify-center items-center">
-            <Slider {...settings} arrows={false} speed={5000}>
+            <Slider {...settings} arrows={false} speed={1000}>
               {data.map((e, i) => {
                 return (
                   <GridElement
