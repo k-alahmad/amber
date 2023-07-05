@@ -7,16 +7,16 @@ import Register from "./components/Register";
 import Location from "./components/Location";
 
 const Home = () => {
-  return (
-    <div>
-      {/* <Header /> */}
-      <Nearby />
-      <Location />
-      <FloorPlan />
-      <PaymentPlan />
-      <Register />
-    </div>
-  );
+	return (
+		<div>
+			<Header />
+			<Nearby />
+			<Location />
+			<FloorPlan />
+			<PaymentPlan />
+			<Register />
+		</div>
+	);
 };
 
 export default Home;
