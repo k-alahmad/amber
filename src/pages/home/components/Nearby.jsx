@@ -130,11 +130,26 @@ const Nearby = () => {
       duration: "25 MINUTES",
       img: heroLeft,
     },
+    {
+      icon: icon,
+      name: "dubai airport",
+      duration: "25 MINUTES",
+      img: heroMiddle,
+    },
+    {
+      icon: icon,
+      name: "khalifa tower",
+      duration: "25 MINUTES",
+      img: heroLeft,
+    },
     { icon: icon, name: "some name", duration: "25 MINUTES", img: heroMiddle },
-    { icon: icon, name: "some name", duration: "25 MINUTES", img: heroLeft },
-    { icon: icon, name: "some name", duration: "25 MINUTES", img: heroMiddle },
-    { icon: icon, name: "some name", duration: "25 MINUTES", img: heroLeft },
-    { icon: icon, name: "some name", duration: "25 MINUTES", img: heroMiddle },
+    { icon: icon, name: "dubai frame", duration: "25 MINUTES", img: heroLeft },
+    {
+      icon: icon,
+      name: "dubai opera",
+      duration: "25 MINUTES",
+      img: heroMiddle,
+    },
     { icon: icon, name: "some name", duration: "25 MINUTES", img: heroLeft },
     { icon: icon, name: "some name", duration: "25 MINUTES", img: heroMiddle },
     { icon: icon, name: "some name", duration: "25 MINUTES", img: heroLeft },
@@ -176,9 +191,8 @@ const Nearby = () => {
             fuga soluta suscipit quas, vitae consequuntur molestias aut sit
             magni dolorum?
           </p>
-
           <div className="py-5 lg:py-16 max-w-full flex justify-center items-center">
-            <Slider {...settings} arrows={false} speed={1000}>
+            <Slider {...settings} arrows={false} speed={1000} touchMove>
               {data.map((e, i) => {
                 return (
                   <GridElement
