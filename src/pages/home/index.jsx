@@ -9,10 +9,10 @@ import Location from "./components/Location";
 const Home = () => {
 	return (
 		<div>
-			<Header />
+			{/* <Header /> */}
 			<Nearby />
 			<Location />
-			<FloorPlan />
+			{/* <FloorPlan /> */}
 			<PaymentPlan />
 			<Register />
 		</div>

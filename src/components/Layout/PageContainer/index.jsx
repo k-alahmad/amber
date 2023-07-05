@@ -7,9 +7,9 @@ const PageLayout = ({ children }) => {
   // 	window.scrollTo(0, 0);
   // }, []);
   return (
-    <div className=" ">
+    <div className=" flex flex-col justify-center items-center">
       <NavBar />
-      <div className="min-h-screen">{children}</div>
+      <div className="min-h-screen max-w-[1920px]">{children}</div>
       <Footer />
     </div>
   );
