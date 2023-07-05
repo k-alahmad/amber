@@ -148,13 +148,13 @@ const Nearby = () => {
         }`}
       >
         <img src={icon} alt="" className="h-10 w-9" />
-        <p className="text-[16px] font-bold"> {name}</p>
-        <p className=" font-extralight text-[12px]"> {duration} </p>
+        <p className="text-smaller font-bold"> {name}</p>
+        <p className=" font-extralight text-tiny"> {duration} </p>
       </div>
     );
   };
   return (
-    <div className="bg-[#222222] relative h-[900px] md:h-[650px] lg:h-[700px] 2xl:h-[850px] grid grid-cols-12 overflow-hidden">
+    <div className="bg-[#222222] relative h-[900px] md:h-[950px] lg:h-[700px] 2xl:h-[850px] grid grid-cols-12 overflow-hidden">
       <div className="border-r-[1px] border-white/20" />
       <div className="border-r-[1px] border-white/20" />
       <div className="border-r-[1px] border-white/20" />
@@ -168,9 +168,9 @@ const Nearby = () => {
       <div className="border-r-[1px] border-white/20" />
       <div className="border-r-[1px] border-white/20" />
       <div className="absolute  h-full w-full text-white lg:grid lg:grid-cols-12">
-        <div className="lg:translate-x-16 col-span-4 py-7">
-          <p className="font-bold text-[44px]">EASY ACCESS TO KEY LANDMARKS</p>
-          <p className="text-white/60 font-light text-[18px]">
+        <div className="lg:px-10 xl:px-16 col-span-5 py-7">
+          <p className="font-bold text-huge">EASY ACCESS TO KEY LANDMARKS</p>
+          <p className="text-white/60 font-light text-small">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
             culpa nisi dolores, quibusdam itaque laboriosam, placeat in quos
             fuga soluta suscipit quas, vitae consequuntur molestias aut sit

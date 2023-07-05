@@ -16,7 +16,7 @@ const Element = ({ name, color }) => {
           className={` rounded-full h-full w-full`}
         />
       </div>
-      <p className="px-4 font-normal text-[18px] "> {name}</p>
+      <p className="px-4 font-normal text-small "> {name}</p>
     </div>
   );
 };
@@ -32,8 +32,8 @@ const Location = () => {
         </p>
       </div>
       <div className="lg:grid lg:grid-cols-12">
-        <div className="lg:translate-x-16 col-span-4 space-y-4 lg:space-y-8">
-          <p className="font-bold text-[32px] lg:text-[44px]">
+        <div className="lg:px-10 xl:px-16 col-span-5 space-y-4 lg:space-y-8">
+          <p className="font-bold text-bigger lg:text-huge">
             Site Location Masterplan
           </p>
           <Element color={"#27AE60"} name={"Apartment Club House"} />
@@ -41,7 +41,7 @@ const Location = () => {
           <Element color={"#8E44AD"} name={"Low Rise Villa Community"} />
           <Element color={"#2980B9"} name={"Low Rise Villa Community"} />
         </div>
-        <div className="col-span-8 max-md:pt-8">
+        <div className="col-span-7 max-md:pt-8">
           <img src={photo2} alt="" className="h-full w-full" />
         </div>
       </div>
