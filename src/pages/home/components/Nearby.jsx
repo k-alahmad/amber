@@ -3,8 +3,125 @@ import icon from "../../../assets/icons/kalifa.svg";
 import heroLeft from "../../../assets/images/heroLeft.png";
 import heroMiddle from "../../../assets/images/heroMiddle.png";
 import { motion } from "framer-motion";
+import Slider from "react-slick";
 
+import {
+  MdFiberManualRecord as FiberManualRecordIcon,
+  MdOutlineFiberManualRecord as OutFiberManualRecordIcon,
+} from "react-icons/md";
 const Nearby = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  var settings = {
+    responsive: [
+      {
+        breakpoint: 3000,
+        settings: {
+          className: "w-full",
+          slidesToShow: 3,
+          rows: 3,
+          slidesToScroll: 4,
+          infinite: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setCurrentSlide(next == 0 ? next : Math.round(next / 4));
+          },
+        },
+      },
+      {
+        breakpoint: 1537,
+        settings: {
+          className: "w-full",
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          rows: 2,
+          infinite: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setCurrentSlide(next == 0 ? next : Math.round(next / 3));
+          },
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          className: "w-full",
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          rows: 1,
+          infinite: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setCurrentSlide(next == 0 ? next : Math.round(next / 3));
+          },
+        },
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          className: "w-full px-[3%]",
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          rows: 1,
+          infinite: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setCurrentSlide(next == 0 ? next : Math.round(next / 3));
+          },
+        },
+      },
+      {
+        breakpoint: 730,
+        settings: {
+          className: "w-full px-[3%]",
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          rows: 1,
+          infinite: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setCurrentSlide(next == 0 ? next : Math.round(next / 3));
+          },
+        },
+      },
+      {
+        breakpoint: 532,
+        settings: {
+          className: "w-full px-[3%]",
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          rows: 1,
+          infinite: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setCurrentSlide(next == 0 ? next : Math.round(next / 3));
+          },
+        },
+      },
+    ],
+    dots: true,
+    touchMove: true,
+
+    customPaging: (index) => {
+      return index == currentSlide ? (
+        <div key={index} className="text-[white]">
+          <FiberManualRecordIcon />
+        </div>
+      ) : (
+        <div key={index} className="text-[white]">
+          <OutFiberManualRecordIcon />
+        </div>
+      );
+    },
+    appendDots: (dots) => {
+      return (
+        <ul>
+          {dots.map((item, index) => {
+            return item;
+          })}
+        </ul>
+      );
+    },
+  };
   const [selectedIndex, setSelectedIndex] = useState(0);
   let data = [
     {
@@ -26,8 +143,8 @@ const Nearby = () => {
     return (
       <div
         onClick={onClick}
-        className={`bg-white text-black p-6 h-32 w-40 rounded flex flex-col justify-center items-start space-y-1 cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-white/40 hover:bg-white/90 ${
-          index == selectedIndex ? "scale-[1.1] shadow-lg shadow-white/40" : ""
+        className={`bg-white mb-6 text-black p-6 h-32 w-40 rounded flex flex-col justify-center items-start space-y-1 cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-white/40 hover:bg-white/90 ${
+          index == selectedIndex ? "bg-white/70 shadow-lg shadow-white/40" : ""
         }`}
       >
         <img src={icon} alt="" className="h-10 w-9" />
@@ -37,13 +154,21 @@ const Nearby = () => {
     );
   };
   return (
-    <div className="bg-[#222222] relative h-[850px] grid grid-cols-12 overflow-hidden">
+    <div className="bg-[#222222] relative h-[900px] md:h-[650px] lg:h-[700px] 2xl:h-[850px] grid grid-cols-12 overflow-hidden">
       <div className="border-r-[1px] border-white/20" />
       <div className="border-r-[1px] border-white/20" />
       <div className="border-r-[1px] border-white/20" />
       <div className="border-r-[1px] border-white/20" />
-      <div className="absolute  h-full w-full text-white grid grid-cols-12">
-        <div className="pl-16 col-span-4 py-7">
+      <div className="border-r-[1px] border-white/20" />
+      <div className="border-r-[1px] border-white/20" />
+      <div className="border-r-[1px] border-white/20" />
+      <div className="border-r-[1px] border-white/20" />
+      <div className="border-r-[1px] border-white/20" />
+      <div className="border-r-[1px] border-white/20" />
+      <div className="border-r-[1px] border-white/20" />
+      <div className="border-r-[1px] border-white/20" />
+      <div className="absolute  h-full w-full text-white lg:grid lg:grid-cols-12">
+        <div className="lg:translate-x-16 col-span-4 py-7">
           <p className="font-bold text-[44px]">EASY ACCESS TO KEY LANDMARKS</p>
           <p className="text-white/60 font-light text-[18px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
@@ -52,21 +177,23 @@ const Nearby = () => {
             magni dolorum?
           </p>
 
-          <div className="grid grid-cols-3 gap-7 py-16">
-            {data.map((e, i) => {
-              return (
-                <GridElement
-                  key={i}
-                  icon={e.icon}
-                  name={e.name}
-                  duration={e.duration}
-                  onClick={() => {
-                    setSelectedIndex(i);
-                  }}
-                  index={i}
-                />
-              );
-            })}
+          <div className="py-5 lg:py-16 max-w-full flex justify-center items-center">
+            <Slider {...settings} arrows={false} speed={5000}>
+              {data.map((e, i) => {
+                return (
+                  <GridElement
+                    key={i}
+                    icon={e.icon}
+                    name={e.name}
+                    duration={e.duration}
+                    onClick={() => {
+                      setSelectedIndex(i);
+                    }}
+                    index={i}
+                  />
+                );
+              })}
+            </Slider>
           </div>
         </div>
         <motion.div
