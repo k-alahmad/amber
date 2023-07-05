@@ -3,16 +3,18 @@ import React from "react";
 const Circle = ({ number, customStyle, text }) => {
   return (
     <div
-      className={`absolute ${customStyle} sm:-top-12 max-sm:left-[35%] w-28 flex flex-col justify-center items-center`}
+      className={`absolute ${customStyle} -top-10 sm:-top-12 w-24 sm:w-28 flex flex-col justify-center items-center`}
     >
       <div
-        className={`bg-[#222222]/20 rounded-full w-24 h-24  flex justify-center items-center `}
+        className={`bg-[#222222]/20 rounded-full w-20 h-20  sm:w-24 sm:h-24  flex justify-center items-center `}
       >
-        <div className="bg-[#222222] rounded-full w-16 h-16 flex justify-center items-center text-white font-medium text-small ">
+        <div className="bg-[#222222] rounded-full w-14 h-14 sm:w-16 sm:h-16 flex justify-center items-center text-white font-medium text-small ">
           {number}%
         </div>
       </div>
-      <p className="text-center text-[14px] pt-3 font-semibold">{text}</p>
+      <p className="text-center text-tiny sm:text-[14px] pt-3 font-semibold">
+        {text}
+      </p>
     </div>
   );
 };
@@ -33,26 +35,22 @@ const PaymentPlan = () => {
             Post-Handover payment plan
           </p>
           <div className="relative flex flex-col w-full">
-            <div className="h-[680px] w-[1px] sm:w-full sm:h-[2px] bg-black self-center" />
-            <Circle
-              number={20}
-              customStyle={"sm:left-[0%] max-sm:top-[1%]"}
-              text={"upfront"}
-            />
+            <div className=" w-full h-[2px] bg-black self-center" />
+            <Circle number={20} customStyle={"left-[0%]"} text={"upfront"} />
             <Circle
               number={60}
-              customStyle={"sm:left-[25%] max-sm:top-[20%]"}
+              customStyle={"left-[25%] "}
               text={" instalments per month until the project is done"}
             />
             <Circle
               number={10}
-              customStyle={"sm:left-[50%] max-sm:top-[50%]"}
+              customStyle={"left-[50%] "}
               text={"on handover (when the apartment is delivered)"}
             />
             <Circle
               number={10}
-              customStyle={"sm:left-[75%] max-sm:top-[80%]"}
-              text={" instalments after handover for a period of time. "}
+              customStyle={"left-[75%] "}
+              text={"instalments after handover for a period of time."}
             />
           </div>
         </div>
