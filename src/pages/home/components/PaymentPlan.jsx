@@ -21,7 +21,7 @@ const Circle = ({ number, customStyle, text }) => {
 
 const PaymentPlan = () => {
   return (
-    <div className="relative h-[1340px] sm:h-[600px] xl:h-[400px] grid grid-cols-12 border-b-[1px]">
+    <div className="relative h-[600px] sm:h-[600px] xl:h-[400px] grid grid-cols-12 border-b-[1px]">
       <div className="border-r-[1px] border-l-[1px] border-gray-400 col-span-4" />
       <div className="border-r-[1px] border-gray-400 col-span-4" />
       <div className="border-r-[1px] border-gray-400 col-span-4" />

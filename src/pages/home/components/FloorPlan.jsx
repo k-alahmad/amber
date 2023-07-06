@@ -56,7 +56,7 @@ const FloorPlan = () => {
   const slideRef2 = useRef();
 
   return (
-    <div className="relative h-[1500px] grid grid-cols-12">
+    <div className="relative h-[1500px] lg:h-[1050px] grid grid-cols-12">
       <div className="border-r-[1px] border-l-[1px] border-gray-400 col-span-4" />
       <div className="border-r-[1px] border-gray-400 col-span-4" />
       <div className="border-r-[1px] border-gray-400 col-span-4" />
@@ -80,7 +80,7 @@ const FloorPlan = () => {
               slidesToScroll={1}
               slidesToShow={1}
               touchMove={false}
-              className=" h-full w-full px-[3%]"
+              className=" h-full max-w-[300px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[300px] xl:max-w-[350px] 2xl:max-w-[500px] px-[3%]"
             >
               {floorData.map((d, i) => {
                 return (
@@ -88,7 +88,7 @@ const FloorPlan = () => {
                     key={i}
                     src={d.image}
                     alt=""
-                    className="h-[500px] md:h-[700px] w-full object-conatin rounded"
+                    className="h-[500px] xl:h-[700px] w-full object-conatin rounded"
                   />
                 );
               })}
@@ -104,7 +104,7 @@ const FloorPlan = () => {
               slidesToShow={1}
               vertical={true}
               touchMove={false}
-              className="max-w-[300px] sm:w-[600px] md:w-[700px] lg:w-[300px] xl:w-[350px] 2xl:w-[500px]"
+              className="max-w-[300px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[300px] xl:max-w-[350px] 2xl:max-w-[500px]"
             >
               {floorData.map((d, i) => {
                 return (
