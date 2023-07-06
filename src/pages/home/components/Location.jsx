@@ -23,7 +23,7 @@ const Element = ({ name, color }) => {
 
 const Location = () => {
   return (
-    <div className="relative h-[800px] md:h-[1150px] lg:h-[800px] xl:h-[830px] 2xl:h-[950px] grid grid-cols-12 border-b-[1px] border-gray-400 ">
+    <div className="relative h-[800px] md:h-[1150px] lg:h-[800px] xl:h-[830px] 2xl:h-[950px] grid grid-cols-12">
       <div className="border-r-[1px] border-l-[1px] border-gray-400 col-span-4" />
       <div className="border-r-[1px] border-gray-400 col-span-4" />
       <div className="border-r-[1px] border-gray-400 col-span-4" />
