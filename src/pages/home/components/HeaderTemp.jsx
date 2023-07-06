@@ -58,22 +58,16 @@ const HeaderTemp = () => {
 					{...settings}
 					autoplay
 					autoplaySpeed={4000}
-					className=' h-full w-[400px] sm:w-[600px]'
+					className=' h-full w-[330px] sm:w-[600px]'
 				>
 					{imgs.map((img, index) => {
 						return (
-							<div className='felx justify-center items-center '>
-								<img
-									src={img}
-									alt=''
-									className='h-[400px] w-full object-conatin rounded shadow-xl	'
-								/>
-								<div className='felx bottom-0 w-full h-[20%] '>
-									<p className='felx px-[1%] text-big uppercase font-semibold text-lightBlack'>
-										Starting price: 1.2M
-									</p>
-								</div>
-							</div>
+							<img
+								key={index}
+								src={img}
+								alt=''
+								className='h-[400px] w-full object-conatin rounded'
+							/>
 						);
 					})}
 				</Slider>
