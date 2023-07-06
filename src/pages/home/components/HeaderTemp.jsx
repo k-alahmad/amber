@@ -63,6 +63,7 @@ const HeaderTemp = () => {
           {imgs.map((img, index) => {
             return (
               <img
+                key={index}
                 src={img}
                 alt=""
                 className="h-[400px] w-full object-conatin rounded"
