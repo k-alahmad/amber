@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { RiEnglishInput } from "react-icons/Ri";
 import { IoIosArrowDown } from "react-icons/io";
 import {
 	MdLanguage,
