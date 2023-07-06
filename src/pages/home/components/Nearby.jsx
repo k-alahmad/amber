@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import kalifaIcon from "../../../assets/icons/kalifa.svg";
 import { useTranslation } from "react-i18next";
-import BusinessBayIcon from "../../../assets/icons/businessBay.svg";
+import BusinessBayIcon from "../../../assets/icons/BusinessBayIcon.svg";
 import dubaiFrameIcon from "../../../assets/icons/dubaiFrame.svg";
 import dubaiMallIcon from "../../../assets/icons/dubaiMall.svg";
 import dubaiOperaIcon from "../../../assets/icons/dubaiOpera.svg";
