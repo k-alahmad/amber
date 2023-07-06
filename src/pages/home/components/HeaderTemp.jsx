@@ -12,6 +12,7 @@ import {
 	MdFiberManualRecord as FiberManualRecordIcon,
 	MdOutlineFiberManualRecord as OutFiberManualRecordIcon,
 } from "react-icons/md";
+
 const HeaderTemp = () => {
 	const { i18n, t } = useTranslation();
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -53,12 +54,12 @@ const HeaderTemp = () => {
 	let headerTitle = t("HeaderMainTitle").split();
 	return (
 		<>
-			<div className=' flex justify-center items-center md:hidden pb-12 '>
+			<div className=' flex justify-center max-w-screen overflow-hidden items-center md:hidden pb-12 '>
 				<Slider
 					{...settings}
 					autoplay
 					autoplaySpeed={4000}
-					className=' h-full w-[330px] sm:w-[600px]'
+					className=' h-full w-[400px] sm:w-[600px]'
 				>
 					{imgs.map((img, index) => {
 						return (
