@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import kalifaIcon from "../../../assets/icons/kalifa.svg";
 import { useTranslation } from "react-i18next";
-import icon from "../../../assets/icons/kalifa.svg";
 import BusinessBayIcon from "../../../assets/icons/BusinessBay.svg";
 import dubaiFrameIcon from "../../../assets/icons/dubaiFrame.svg";
 import dubaiMallIcon from "../../../assets/icons/dubaiMall.svg";
@@ -11,8 +10,6 @@ import MedydanIcon from "../../../assets/icons/horses.svg";
 import PalmJumeirahIcon from "../../../assets/icons/palm.svg";
 import RasAlkhorIcon from "../../../assets/icons/RasAlkhorIcon.svg";
 import SOBHAHARTLANDIcon from "../../../assets/icons/SOBHAHARTLAND.svg";
-import heroLeft from "../../../assets/images/heroLeft.png";
-import heroMiddle from "../../../assets/images/heroMiddle.png";
 import BurjKhalifa from "../../../assets/images/map/BurjKhalifa.jpg";
 import BusinessBay from "../../../assets/images/map/BusinessBay.jpg";
 import DubaiFrame from "../../../assets/images/map/DubaiFrame.jpg";
