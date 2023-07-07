@@ -162,7 +162,7 @@ const FloorPlan = () => {
             setDisableBtn(false);
           }, 400);
         }}
-        className={`absolute cursor-pointer flex justify-center items-center hover:animate-pulse ${customStyle} `}
+        className={`absolute cursor-pointer flex justify-center items-center hover:animate-pulse max-sm:hidden ${customStyle} `}
       >
         {text}
       </button>
@@ -173,15 +173,14 @@ const FloorPlan = () => {
       <div className="border-r-[1px] border-l-[1px] border-gray-400 col-span-4" />
       <div className="border-r-[1px] border-gray-400 col-span-4" />
       <div className="border-r-[1px] border-gray-400 col-span-4" />
-
       <div className="absolute pt-16 bg-transparent h-full w-full">
         <div className="text-huge font-bold lg:w-[30%] w-[90%] px-[5%]">
           FLOOR PLAN AND UNIT PLANS
         </div>
-        <div className="lg:grid lg:grid-cols-12 pt-12">
+        <div className="lg:grid lg:grid-cols-12 pt-12 ">
           <div className="col-span-4 flex flex-col justify-start items-center">
             <div
-              className="w-[320px] sm:w-[610px] md:w-[750px] lg:w-[330px] xl:w-[410px] 2xl:w-[500px] h-[140px] sm:h-[260px] md:h-[290px] lg:h-[140px] xl:h-[170px] 2xl:h-[260px] relative bg-no-repeat font-medium text-tiny translate-y-24 max-lg:bg-center"
+              className="w-[320px] sm:w-[610px] md:w-[750px] lg:w-[330px] xl:w-[410px] 2xl:w-[500px] h-[140px] sm:h-[260px] md:h-[290px] lg:h-[140px] xl:h-[170px] 2xl:h-[260px] relative bg-no-repeat font-medium text-tiny sm:translate-y-24 sm:max-lg:bg-center"
               style={{
                 backgroundImage: `url(${mainFloor})`,
               }}
@@ -293,8 +292,13 @@ const FloorPlan = () => {
                 i={3}
               />
             </div>
+            <div>
+              <div className="text-huge mt-16 sm:hidden flex flex-col justify-center items-center w-full self-center">
+                <p>Carousel of Buttons</p>
+              </div>
+            </div>
           </div>
-          <div className="col-span-4 flex justify-center items-center max-lg:mt-28">
+          <div className="col-span-4 flex justify-center items-center sm:max-lg:pt-28">
             <Slider
               ref={slideRef1}
               dots={false}
@@ -317,7 +321,7 @@ const FloorPlan = () => {
               })}
             </Slider>
           </div>
-          <div className="col-span-4 flex flex-col justify-center items-center max-lg:py-12">
+          <div className="col-span-4 flex flex-col justify-center items-center sm:max-lg:pt-12">
             <Slider
               ref={slideRef2}
               dots={false}
