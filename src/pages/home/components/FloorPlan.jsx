@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import floor1 from "../../../assets/images/floorplan/floor1.png";
-import floor2 from "../../../assets/images/floorplan/floor2.png";
-import floor3 from "../../../assets/images/floorplan/floor3.png";
+import floor1 from "../../../assets/images/floorplan/Floor003.svg";
+import floor2 from "../../../assets/images/floorplan/Floor005.svg";
+import floor3 from "../../../assets/images/floorplan/Floor006.svg";
+import mainFloor from "../../../assets/images/floorplan/main.svg";
+import XX03 from "../../../assets/images/floorplan/XX03.svg";
+import XX05 from "../../../assets/images/floorplan/XX05.svg";
+import XX06 from "../../../assets/images/floorplan/XX06.svg";
+
 import Slider from "react-slick";
 const FloorPlan = () => {
 	const [selected, setSelected] = useState(0);
@@ -10,18 +15,26 @@ const FloorPlan = () => {
 		{
 			image: floor1,
 			bedRoomNumber: 1,
+			type: "TYPE A (with study room and powder room + balcony)",
+			suite: "583.94 SQ.FT.",
+			balcony: "55.22 SQ.FT.",
+			total: "639.16 SQ.FT",
+		},
+		{
+			image: floor2,
+			bedRoomNumber: 2,
+			type: "TYPE A (with balcony)",
+			suite: "811.92 SQ.FT.",
+			balcony: "132.40 SQ.FT.",
+			total: "944.32 SQ.FT",
+		},
+		{
+			image: floor3,
+			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
 			suite: "444.66 SQ.FT.",
 			balcony: "55.97 SQ.FT.",
 			total: "500.63 SQ.FT",
-		},
-		{
-			image: floor2,
-			bedRoomNumber: 3,
-			type: "TYPE A (with balcony)",
-			suite: "734.66 SQ.FT.",
-			balcony: "84.97 SQ.FT.",
-			total: "800.63 SQ.FT",
 		},
 	];
 
@@ -33,7 +46,7 @@ const FloorPlan = () => {
 					key={i}
 					disabled={i == selected || disablebtn}
 					className={`h-24 w-24  ${
-						i == selected ? "bg-gray-500" : "bg-cyan-300"
+						i == selected ? "bg-gray-500" : "bg-cyan-700"
 					}`}
 					onClick={() => {
 						slideRef1.current.slickGoTo(i);
@@ -66,9 +79,10 @@ const FloorPlan = () => {
 					FLOOR PLAN AND UNIT PLANS
 				</div>
 				<div className='lg:grid lg:grid-cols-12 pt-12'>
-					<div className='col-span-4 flex flex-col justify-center items-center'>
-						<div className='grid grid-cols-3 gap-1 max-lg:py-12'>
-							{buttons(2)}
+					<div className='col-span-4 flex flex-col '>
+						<img src={mainFloor} />
+						<div className='absolute grid grid-cols-3 gap-1 max-lg:py-12'>
+							{/* {buttons(2)} */}
 						</div>
 					</div>
 					<div className='col-span-4 flex justify-center items-center'>
