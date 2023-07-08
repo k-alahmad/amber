@@ -5,16 +5,16 @@ const LinkElement = ({ name, link, styled, onClick }) => {
       onClick={onClick}
       style={({ isActive }) => {
         return {
-          color: isActive ? "rgba(131, 88, 183, 1)" : "black",
+          color: isActive ? "#B28A5D" : "black",
           borderRadius: 2,
-          borderBottomColor: isActive ? "rgba(131, 88, 183, 1)" : "white",
+          borderBottomColor: isActive ? "#B28A5D" : "white",
           borderBottomWidth: 3,
           paddingBottom: 8,
         };
       }}
       to={link}
     >
-      <p className={`px-1 cursor-pointer font-MED text-smaller ${styled}`}>
+      <p className={`px-1 cursor-pointer font-medium text-med ${styled}`}>
         {name}
       </p>
     </NavLink>

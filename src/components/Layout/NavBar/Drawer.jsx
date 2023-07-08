@@ -17,17 +17,17 @@ export default function Drawer({ children, isOpen, setIsOpen }) {
           (isOpen ? " translate-x-0 " : " translate-x-full ")
         }
       >
-        <article className="relative w-screen  max-w-[200px] pb-10 flex flex-col justify-start items-center space-y-6 overflow-y-scroll h-full">
-          <header className="p-4 font-bold w-full flex justify-center">
+        <article className="relative w-full pb-10 flex flex-col justify-start items-center space-y-6 overflow-y-scroll h-full">
+          <header className="p-4 font-bold w-full flex justify-between items-start ">
             <MdClose
               size={30}
               onClick={() => {
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className="cursor-pointer text-[#B28A5D]"
             />
             <img
-              className="h-[80px] sm:h-[80px]  cursor-pointer"
+              className="h-[100px] sm:h-[100px]  cursor-pointer"
               src={Logo}
               alt="LOGO"
             />
