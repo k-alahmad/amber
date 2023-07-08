@@ -4,62 +4,21 @@ import floor1 from "../../../assets/images/floorplan/Floor003.svg";
 import floor2 from "../../../assets/images/floorplan/Floor005.svg";
 import floor3 from "../../../assets/images/floorplan/Floor006.svg";
 import mainFloor from "../../../assets/images/floorplan/main.svg";
+import Slider from "react-slick";
 import {
 	MdFiberManualRecord as FiberManualRecordIcon,
 	MdOutlineFiberManualRecord as OutFiberManualRecordIcon,
 } from "react-icons/md";
-import { motion } from "framer-motion";
-import Slider from "react-slick";
 const FloorPlan = () => {
 	const { i18n, t } = useTranslation();
-	const [currentSlide, setCurrentSlide] = useState(0);
 	const [selected, setSelected] = useState(0);
 	const [disablebtn, setDisableBtn] = useState(false);
-	var settings = {
-		responsive: [
-			{
-				breakpoint: 532,
-				settings: {
-					className: "w-full",
-					slidesToShow: 2,
-					slidesToScroll: 2,
-					rows: 1,
-					infinite: false,
-					dots: true,
-					beforeChange: (prev, next) => {
-						setCurrentSlide(next == 0 ? next : Math.round(next / 2));
-					},
-				},
-			},
-		],
-		dots: true,
-		touchMove: true,
+	const [currentSlide, setCurrentSlide] = useState(0);
 
-		customPaging: (index) => {
-			return index == currentSlide ? (
-				<div key={index} className='text-[white] text-med'>
-					<FiberManualRecordIcon />
-				</div>
-			) : (
-				<div key={index} className='text-[white] text-med'>
-					<OutFiberManualRecordIcon />
-				</div>
-			);
-		},
-		appendDots: (dots) => {
-			return (
-				<ul>
-					{dots.map((item, index) => {
-						return item;
-					})}
-				</ul>
-			);
-		},
-	};
-	const [selectedIndex, setSelectedIndex] = useState(0);
 	let floorData = [
 		{
 			name: "XX01",
+			color: "#88D2D7",
 			image: floor1,
 			bedRoomNumber: 1,
 			type: "TYPE D (with store room and powder room + balcony)",
@@ -69,6 +28,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX02",
+			color: "#88D2D7",
 			image: floor2,
 			bedRoomNumber: 2,
 			type: "TYPE D (with balcony)",
@@ -78,6 +38,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX03",
+			color: "#65B3C5",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
@@ -87,6 +48,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX04",
+			color: "#88D2D7",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony) - VARIANT 1",
@@ -96,6 +58,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX05",
+			color: "#4FC9EE",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
@@ -105,6 +68,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX06",
+			color: "#88D2D7",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
@@ -114,6 +78,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX07",
+			color: "#4FC9EE",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
@@ -123,6 +88,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX08",
+			color: "#88D2D7",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE C (with powder room + balcony)",
@@ -132,6 +98,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX09",
+			color: "#88D2D7",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE C (with powder room + balcony) - VARIANT 1",
@@ -141,6 +108,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX10",
+			color: "#65B3C5",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
@@ -150,6 +118,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX11",
+			color: "#4FC9EE",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
@@ -159,6 +128,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX12",
+			color: "#4FC9EE",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
@@ -169,6 +139,7 @@ const FloorPlan = () => {
 		{
 			name: "XX13",
 			image: floor3,
+			color: "#88D2D7",
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony) - VARIANT 2",
 			suite: "445.84 SQ.FT.",
@@ -177,6 +148,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX14",
+			color: "#65B3C5",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE A (with balcony)",
@@ -186,6 +158,7 @@ const FloorPlan = () => {
 		},
 		{
 			name: "XX15",
+			color: "#88D2D7",
 			image: floor3,
 			bedRoomNumber: 1,
 			type: "TYPE C (with powder room + balcony) - VARIANT 2",
@@ -194,17 +167,18 @@ const FloorPlan = () => {
 			total: "844.21 SQ.FT",
 		},
 	];
-	const GridElement = ({ name, bedRoomNumber, onClick, index }) => {
+	const GridElement = ({ name, bedRoomNumber, onClick, index, color }) => {
 		return (
 			<div
 				onClick={onClick}
 				dir={i18n.language == "en" ? "ltr" : "rtl"}
-				className={`bg-lightBlack mb-6 text-white p-6 h-15 w-20 rounded grid justify-center items-start space-y-1 cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-white/40 hover:bg-white/90 ${
-					index == selectedIndex ? "bg-white/70 shadow-lg shadow-white/40" : ""
+				style={{ backgroundColor: color }}
+				className={`mb-6 text-black p-3 w-20 rounded cursor-pointer transition-all duration-300 text-center ${
+					index == selected ? "bg-opacity-70" : ""
 				}`}
 			>
 				<p className='text-smaller font-bold'> {name}</p>
-				<p className=' font-extralight text-tiny'> {bedRoomNumber} </p>
+				{/* <p className=" font-extralight text-tiny"> {bedRoomNumber} </p> */}
 			</div>
 		);
 	};
@@ -354,53 +328,62 @@ const FloorPlan = () => {
 								i={3}
 							/>
 						</div>
-						<div>
-							<div className='text-huge mt-16 sm:hidden flex flex-col justify-center items-center w-full self-center'>
-								<div
-									className='lg:px-10 xl:px-16 col-span-5 py-7 max-lg:px-8'
-									dir={i18n.language == "en" ? "ltr" : "rtl"}
-								>
-									<div className='absolute h-full w-full text-white lg:grid lg:grid-cols-12'>
-										<div className=' text-white  py-5 lg:py-16 max-w-full  justify-center items-center'>
-											<Slider
-												{...settings}
-												arrows={false}
-												speed={1000}
-												touchMove
-											>
-												{floorData.map((e, i) => {
-													return (
-														<GridElement
-															key={i}
-															name={e.name}
-															bedRoomNumber={e.bedRoomNumber}
-															onClick={() => {
-																setSelectedIndex(i);
-															}}
-															index={i}
-														/>
-													);
-												})}
-											</Slider>
-										</div>
+
+						<Slider
+							ref={slideRef1}
+							dots={true}
+							infinite={true}
+							speed={600}
+							slidesToScroll={3}
+							slidesToShow={3}
+							touchMove={true}
+							arrows={false}
+							className='text-white mt-32 max-w-[300px] sm:hidden'
+							customPaging={(index) => {
+								return index == currentSlide ? (
+									<div key={index} className='text-lightBlack text-med py-2'>
+										<FiberManualRecordIcon />
 									</div>
-								</div>
-								{/* <motion.div
-									key={selectedIndex}
-									initial={{ opacity: 0, scale: 0.7 }}
-									animate={{
-										opacity: 1,
-										scale: 1,
-									}}
-									transition={{ duration: 0.5 }}
-									className='col-start-6 col-span-7 bg-cyan-600'
-								>
-									<p className='h-full w-full'>
-										{floorData[selectedIndex].name}
-									</p>
-								</motion.div> */}
-							</div>
-						</div>
+								) : (
+									<div key={index} className='text-lightBlack text-med py-2'>
+										<OutFiberManualRecordIcon />
+									</div>
+								);
+							}}
+							appendDots={(dots) => {
+								return (
+									<ul>
+										{dots.map((item, index) => {
+											return item;
+										})}
+									</ul>
+								);
+							}}
+							beforeChange={(prev, next) => {
+								setCurrentSlide(next / 3);
+							}}
+						>
+							{floorData.map((e, i) => {
+								return (
+									<GridElement
+										key={i}
+										name={e.name}
+										bedRoomNumber={e.bedRoomNumber}
+										onClick={() => {
+											slideRef1.current.slickGoTo(i);
+											slideRef2.current.slickGoTo(i);
+											setSelected(i);
+											setDisableBtn(true);
+											setTimeout(() => {
+												setDisableBtn(false);
+											}, 400);
+										}}
+										color={e.color}
+										index={i}
+									/>
+								);
+							})}
+						</Slider>
 					</div>
 					<div className='col-span-4 flex justify-center items-center sm:max-lg:pt-28'>
 						<Slider
