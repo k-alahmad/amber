@@ -360,7 +360,7 @@ const FloorPlan = () => {
 									className='lg:px-10 xl:px-16 col-span-5 py-7 max-lg:px-8'
 									dir={i18n.language == "en" ? "ltr" : "rtl"}
 								>
-									<div className='absolute h-full w-full text-white '>
+									<div className='absolute h-full w-full text-white lg:grid lg:grid-cols-12'>
 										<div className=' text-white  py-5 lg:py-16 max-w-full  justify-center items-center'>
 											<Slider
 												{...settings}
