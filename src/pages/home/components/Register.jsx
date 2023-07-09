@@ -49,7 +49,7 @@ const Register = () => {
 					<div className='space-y-6 pt-8'>
 						<SocialElement
 							icon={<MdLocationOn className='text-white' />}
-							name={"Business Bay - Clover Bay Tower - Ava Real Estate"}
+							name={t("address")}
 						/>
 						{/* <SocialElement
 							icon={<MdMail className='text-white' />}
