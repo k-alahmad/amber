@@ -8,17 +8,22 @@ import HeaderTemp from "./components/HeaderTemp";
 import Brochure from "./components/Brochure";
 
 const Home = () => {
-  return (
-    <>
-      <HeaderTemp />
-      <PaymentPlan />
-      <Nearby />
-      <FloorPlan />
-      {/* <Register /> */}
-      <Location />
-      <Brochure />
-    </>
-  );
+	return (
+		<>
+			<div id='home' />
+			<HeaderTemp />
+			<div id='payment' />
+			<PaymentPlan />
+			<div id='nearby' />
+			<Nearby />
+			<div id='floorPlan' />
+			<FloorPlan />
+			{/* <Register /> */}
+			<div id='location' />
+			<Location />
+			<Brochure />
+		</>
+	);
 };
 
 export default Home;

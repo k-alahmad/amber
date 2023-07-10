@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import photo1 from "../../../assets/images/photo1.png";
 import {
@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { hideModal } from "../../../redux/modal.slice";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
-import ar from "react-phone-input-2/lang/ar.json";
+import emailjs from "@emailjs/browser";
 
 const SocialElement = ({ icon, name }) => {
 	return (
@@ -25,7 +25,7 @@ const SocialElement = ({ icon, name }) => {
 	);
 };
 
-const CustomInput = ({ icon, placeholder, name, onChange }) => {
+const CustomInput = ({ icon, placeholder, name, id, value, onChange }) => {
 	return (
 		<div className='border-b-[1px] border-black px-4 py-3 flex'>
 			{icon}
@@ -35,6 +35,8 @@ const CustomInput = ({ icon, placeholder, name, onChange }) => {
 				name={name}
 				onChange={onChange}
 				placeholder={placeholder}
+				id={id}
+				value={value}
 			/>
 		</div>
 	);
@@ -43,6 +45,36 @@ const CustomInput = ({ icon, placeholder, name, onChange }) => {
 const Register = ({ Registered }) => {
 	const { i18n, t } = useTranslation();
 	const dispatch = useDispatch();
+
+	const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+		emailjs
+			.sendForm(
+				"service_5wdnu6j",
+				"template_slqqcpm",
+				form.current,
+				"sxh5TJan60LQqD6Sw",
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+					// window.location.reload(false);
+				},
+				(error) => {
+					console.log(error.text);
+				},
+			);
+	};
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		let formData = new FormData(form.current);
+		try {
+			sendEmail(e);
+		} catch (error) {
+			console.error("Error here:", error);
+		}
+	};
 	return (
 		<div className='bg-[#F3F3F3] md:grid md:grid-cols-12 '>
 			<div className='col-span-8 p-8 lg:px-16 xl:grid xl:grid-cols-12 gap-6'>
@@ -54,62 +86,52 @@ const Register = ({ Registered }) => {
 							icon={<MdLocationOn className='text-white ' />}
 							name={t("address")}
 						/>
-						{/* <SocialElement
-							icon={<MdMail className='text-white' />}
-							name={"www.avarealestate.ae"}
-						/> */}
-						{/* <SocialElement
-							icon={<MdPhone className='text-white' />}
-							name={"065486264841 - 545631654653"}
-						/> */}
 					</div>
 				</div>
 				<div className='col-span-6 space-y-6 max-lg:pt-8 '>
-					<CustomInput
-						icon={<MdPerson className='text-black text-big' />}
-						placeholder={t("formFullName")}
-					/>
-
-					{/* <CustomInput
-						icon={<MdPhone className='text-black text-big' />}
-						placeholder={t("formPhoneNumber")}
-					/> */}
-					<CustomInput
-						icon={<MdMail className='text-black text-big' />}
-						placeholder={t("formEmail")}
-					/>
-					<PhoneInput
-						country={"ae"}
-						placeholder={t("formPhoneNumber")}
-						enableSearch={true}
-						containerClass='!border-b-[1px] border-black px-1 flex  '
-						inputClass={`!bg-transparent  w-full  !text-lg !h-full !border-none  ${
-							i18n.language == "en" ? "px-0" : "mx-6"
-						} !outline-none `}
-						buttonClass={`!border-none !text-lg ${
-							i18n.language == "en" ? "px-0" : "!mx-3"
-						}`}
-					/>
-					{/* <div className='border-b-[1px] border-black px-4 py-3 flex'>
-						<MdMessage className='text-black text-big' />
-						<textarea
-							type='text'
-							className='border-gray-400 rounded-lg bg-transparent mx-3 px-3 w-full outline-none'
-							rows={8}
-							placeholder='Message'
+					<form ref={form} onSubmit={handleSubmit}>
+						<CustomInput
+							icon={<MdPerson className='text-black text-big' />}
+							placeholder={t("formFullName")}
+							name='fullName'
+							id='fullName'
 						/>
-					</div> */}
-					<button
-						className='bg-[#222222] text-white text-small w-full py-4 '
-						onClick={() => {
-							localStorage.setItem("Registered", true);
-							Registered = true;
 
-							dispatch(hideModal());
-						}}
-					>
-						{t("register")}
-					</button>
+						<CustomInput
+							icon={<MdMail className='text-black text-big' />}
+							placeholder={t("formEmail")}
+							name='email'
+							id='email'
+						/>
+						<PhoneInput
+							country={"ae"}
+							placeholder={t("formPhoneNumber")}
+							enableSearch={true}
+							inputProps={{
+								name: "phone",
+								id: "phone",
+								required: true,
+							}}
+							containerClass='!border-b-[1px] border-black px-1 flex  '
+							inputClass={`!bg-transparent  w-full  !text-lg !h-full !border-none  ${
+								i18n.language == "en" ? "px-0" : "mx-6"
+							} !outline-none `}
+							buttonClass={`!border-none !text-lg ${
+								i18n.language == "en" ? "px-0" : "!mx-3"
+							}`}
+						/>
+						<button
+							className='bg-[#222222] text-white text-small w-full py-4 '
+							onClick={() => {
+								localStorage.setItem("Registered", true);
+								Registered = true;
+								dispatch(hideModal());
+								handleSubmit();
+							}}
+						>
+							{t("register")}
+						</button>
+					</form>
 				</div>
 			</div>
 			<div className='col-span-4'>
