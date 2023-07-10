@@ -4,7 +4,7 @@ import Register from "./Register";
 import { useDispatch, useSelector } from "react-redux";
 import { hideModal, selectState } from "../../../redux/modal.slice";
 
-export default function Modal({ Registered }) {
+export default function Modal() {
   const ref = useRef(null);
   const dispatch = useDispatch();
   const open = useSelector(selectState);
@@ -24,7 +24,7 @@ export default function Modal({ Registered }) {
       <div
         className={`${
           open ? "scale-100" : "scale-0"
-        } transition-all duration-500 justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none w-screen`}
+        } transition-all duration-500 justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none w-full`}
       >
         <div
           ref={ref}
@@ -38,7 +38,7 @@ export default function Modal({ Registered }) {
           >
             <MdClose size={50} />
           </div>
-          <Register Registered={Registered} />
+          <Register />
         </div>
       </div>
       <div
