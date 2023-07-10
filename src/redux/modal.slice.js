@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   open: false,
+  registered: false,
 };
 const modalSlice = createSlice({
   name: "modal",
@@ -13,11 +14,15 @@ const modalSlice = createSlice({
     hideModal: (state, action) => {
       state.open = false;
     },
+    register: (state, aciton) => {
+      state.registered = true;
+    },
   },
 });
 
-export const { showModal, hideModal } = modalSlice.actions;
+export const { showModal, hideModal, register } = modalSlice.actions;
 export const selectModal = (state) => state.modal;
 export const selectState = (state) => state.modal.open;
+export const selectRegisterState = (state) => state.modal.registered;
 
 export default modalSlice.reducer;

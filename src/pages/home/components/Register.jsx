@@ -9,7 +9,7 @@ import {
   //   MdMessage
 } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { hideModal } from "../../../redux/modal.slice";
+import { hideModal, register } from "../../../redux/modal.slice";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import emailjs from "@emailjs/browser";
@@ -71,6 +71,9 @@ function Register({ absolute }) {
     let formData = new FormData(form.current);
     try {
       sendEmail(e);
+      dispatch(register());
+      localStorage.setItem("Registered", true);
+      dispatch(hideModal());
     } catch (error) {
       console.error("Error here:", error);
     }
@@ -128,15 +131,7 @@ function Register({ absolute }) {
               direction: "ltr",
             }}
           />
-          <button
-            className="bg-[#222222] text-white text-small w-full py-4 "
-            onClick={() => {
-              localStorage.setItem("Registered", true);
-              Registered = true;
-              dispatch(hideModal());
-              handleSubmit();
-            }}
-          >
+          <button className="bg-[#222222] text-white text-small w-full py-4 ">
             {t("register")}
           </button>
         </form>

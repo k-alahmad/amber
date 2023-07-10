@@ -24,10 +24,11 @@ import {
 } from "react-icons/md";
 import LazyImage from "../../../components/UI/LazyImage";
 import RegisterModal from "./RegisterModal";
-import { useDispatch } from "react-redux";
-import { showModal } from "../../../redux/modal.slice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectRegisterState, showModal } from "../../../redux/modal.slice";
 const FloorPlan = () => {
   const dispatch = useDispatch();
+  const registerState = useSelector(selectRegisterState);
   const { i18n, t } = useTranslation();
   const [selected, setSelected] = useState(0);
   const [disablebtn, setDisableBtn] = useState(false);
@@ -36,19 +37,17 @@ const FloorPlan = () => {
 
   let CounterFull = JSON.parse(localStorage.getItem("CounterFull")) ?? false;
 
-  let Registered = JSON.parse(localStorage.getItem("Registered")) ?? false;
+  let Registered =
+    JSON.parse(localStorage.getItem("Registered")) ?? registerState;
 
   useEffect(() => {
-    console.log(CounterFull);
-    console.log(ViewCounter);
-    console.log(Registered);
     if (Registered !== true) {
       if (ViewCounter >= 3)
         if (CounterFull !== true) localStorage.setItem("CounterFull", true);
     } else {
       localStorage.setItem("CounterFull", false);
     }
-  }, [ViewCounter, Registered, CounterFull]);
+  }, [ViewCounter, Registered, CounterFull, registerState]);
 
   let floorData = [
     {

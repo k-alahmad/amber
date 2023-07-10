@@ -12,6 +12,7 @@ const NavBar = () => {
   const { t, i18n } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [header, setHeader] = useState(false);
+  const [selectedLink, setSelectedLink] = useState("home");
   const dispatch = useDispatch();
   let elements = [
     { name: t("Home"), link: "home" },
@@ -78,9 +79,11 @@ const NavBar = () => {
             key={e.link}
             name={e.name}
             link={e.link}
+            selectedLink={selectedLink}
             onClick={() => {
               setMobileOpen(false);
               handleScroll(e.link);
+              setSelectedLink(e.link);
             }}
           />
         ))}
