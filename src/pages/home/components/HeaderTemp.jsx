@@ -81,11 +81,11 @@ const HeaderTemp = () => {
 					})}
 				</Slider>
 			</div>
-			<div className='max-md:hidden border-t-[1px] border-gray-400 mt-12'>
+			<div className='max-md:hidden border-t-[1px] border-gray-300 mt-12'>
 				<div className='relative grid grid-cols-12 h-[1850px]'>
-					<div className='border-r-[1px] border-l-[1px] border-gray-400 col-span-4' />
-					<div className='border-r-[1px] border-gray-400 col-span-4 z-20' />
-					<div className='border-r-[1px] border-gray-400 col-span-4' />
+					<div className='border-r-[1px] border-l-[1px] border-gray-300 col-span-4' />
+					<div className='border-r-[1px] border-gray-300 col-span-4 z-20' />
+					<div className='border-r-[1px] border-gray-300 col-span-4' />
 					<div className='absolute w-full h-full '>
 						<div className='grid grid-cols-12'>
 							<div className='col-span-4 px-[3%] translate-x-[3%] '>

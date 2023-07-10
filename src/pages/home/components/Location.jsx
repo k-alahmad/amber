@@ -23,10 +23,10 @@ const Element = ({ name, color }) => {
 
 const Location = () => {
 	return (
-		<div className='relative h-[800px] md:h-[1150px] lg:h-[800px] xl:h-[830px] 2xl:h-[950px] mt-12 grid grid-cols-12'>
-			<div className='border-r-[1px] border-l-[1px] border-gray-400 col-span-4' />
-			<div className='border-r-[1px] border-gray-400 col-span-4' />
-			<div className='border-r-[1px] border-gray-400 col-span-4' />
+		<div className='relative h-[800px] md:h-[1150px] lg:h-[800px] xl:h-[830px] 2xl:h-[950px]  grid grid-cols-12'>
+			<div className='border-r-[1px] border-l-[1px] border-gray-300 col-span-4' />
+			<div className='border-r-[1px] border-gray-300 col-span-4' />
+			<div className='border-r-[1px] border-gray-300 col-span-4' />
 			<div className='absolute max-md:pt-16 bg-transparent h-full w-full'>
 				<div className='hidden md:block text-9xl bg-transparent text-black py-14 w-full overflow-hidden'>
 					<p className='animate-textCamera relative whitespace-nowrap'>

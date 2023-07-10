@@ -22,6 +22,7 @@ import {
 	MdFiberManualRecord as FiberManualRecordIcon,
 	MdOutlineFiberManualRecord as OutFiberManualRecordIcon,
 } from "react-icons/md";
+import LazyImage from "../../../components/UI/LazyImage";
 const FloorPlan = () => {
 	const { i18n, t } = useTranslation();
 	const [selected, setSelected] = useState(0);
@@ -243,9 +244,9 @@ const FloorPlan = () => {
 			className='relative h-[1500px] lg:h-[1050px] grid grid-cols-12 '
 			dir={i18n.language == "en" ? "" : "rtl"}
 		>
-			<div className='border-r-[1px] border-l-[1px] border-gray-400 col-span-4' />
-			<div className='border-r-[1px] border-gray-400 col-span-4' />
-			<div className='border-r-[1px] border-gray-400 col-span-4' />
+			<div className='border-r-[1px] border-l-[1px] border-gray-300 col-span-4' />
+			<div className='border-r-[1px] border-gray-300 col-span-4' />
+			<div className='border-r-[1px] border-gray-300 col-span-4' />
 			<div className='absolute pt-16 bg-transparent h-full w-full'>
 				<div
 					className='text-huge font-bold lg:w-[35%] w-[90%] px-[5%]'
@@ -447,7 +448,7 @@ const FloorPlan = () => {
 						>
 							{floorData.map((d, i) => {
 								return (
-									<img
+									<LazyImage
 										key={i}
 										src={d.image}
 										alt=''
