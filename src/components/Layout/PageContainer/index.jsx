@@ -9,7 +9,7 @@ const PageLayout = ({ children }) => {
   return (
     <div className=" flex flex-col justify-center items-center">
       <NavBar />
-      <div className="min-h-screen max-w-[1920px]">{children}</div>
+      <div className="min-h-screen w-full max-w-[1920px]">{children}</div>
       <Footer />
     </div>
   );

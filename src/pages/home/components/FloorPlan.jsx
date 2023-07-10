@@ -24,13 +24,15 @@ import {
 } from "react-icons/md";
 import LazyImage from "../../../components/UI/LazyImage";
 import RegisterModal from "./RegisterModal";
+import { useDispatch } from "react-redux";
+import { showModal } from "../../../redux/modal.slice";
 const FloorPlan = () => {
+  const dispatch = useDispatch();
   const { i18n, t } = useTranslation();
   const [selected, setSelected] = useState(0);
   const [disablebtn, setDisableBtn] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [ViewCounter, setViewCounter] = useState(0);
-  const [showModal, setShowModal] = useState(false);
 
   let CounterFull = JSON.parse(localStorage.getItem("CounterFull")) ?? false;
 
@@ -232,7 +234,7 @@ const FloorPlan = () => {
               setDisableBtn(false);
             }, 400);
           } else {
-            setShowModal(true);
+            dispatch(showModal());
           }
         }}
         className={`absolute cursor-pointer flex justify-center items-center hover:animate-pulse max-sm:hidden ${customStyle} `}
@@ -512,7 +514,7 @@ const FloorPlan = () => {
           </div>
         </div>
       </div>
-      <RegisterModal setShowModal={setShowModal} showModal={showModal} />
+      <RegisterModal Registered={Registered} />
     </div>
   );
 };
