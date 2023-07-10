@@ -448,12 +448,15 @@ const FloorPlan = () => {
 						>
 							{floorData.map((d, i) => {
 								return (
-									<LazyImage
-										key={i}
-										src={d.image}
-										alt=''
-										className='h-[500px] xl:h-[600px] w-full object-conatin rounded'
-									/>
+									<div>
+										{d.name}
+										<img
+											key={i}
+											src={d.image}
+											alt={d.name}
+											className='h-[500px] xl:h-[600px] w-full object-conatin rounded'
+										/>
+									</div>
 								);
 							})}
 						</Slider>

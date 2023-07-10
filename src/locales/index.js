@@ -56,6 +56,7 @@ i18n.use(initReactI18next).init({
 				floorBalcony: "البلكون",
 				floorTotal: "المجموع",
 				address: "مكتب 609 ، برج كلوفر باي - 6 أ مراسي - الخليج التجاري - دبي",
+				locationTitle: "المخطط الرئيسي للموقع",
 			},
 		},
 		en: {
@@ -110,6 +111,7 @@ i18n.use(initReactI18next).init({
 				floorTotal: "TOTAL",
 				address:
 					" Office 609, Clover Bay Tower - 6a Marasi Dr - Business Bay - Dubai",
+				locationTitle: "Site Location Masterplan",
 			},
 		},
 		fa: {
@@ -162,8 +164,8 @@ i18n.use(initReactI18next).init({
 				floorSuite: "سوئیت",
 				floorBalcony: "بالکن",
 				floorTotal: "کل",
-				address:
-					" Office 609, Clover Bay Tower - 6a Marasi Dr - Business Bay - Dubai",
+				address: "دبی - بیزینس بی - ساختمان کلاور بی - واحد ۶۰۹",
+				locationTitle: "موقعیت پروژه و مستر پلان",
 			},
 		},
 	},

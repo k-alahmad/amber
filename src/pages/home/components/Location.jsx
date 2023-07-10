@@ -1,5 +1,6 @@
 import React from "react";
 import photo2 from "../../../assets/images/photo2.png";
+import { useTranslation } from "react-i18next";
 
 const Element = ({ name, color }) => {
 	return (
@@ -22,8 +23,12 @@ const Element = ({ name, color }) => {
 };
 
 const Location = () => {
+	const { i18n, t } = useTranslation();
 	return (
-		<div className='relative h-[800px] md:h-[1150px] lg:h-[800px] xl:h-[830px] 2xl:h-[950px]  grid grid-cols-12'>
+		<div
+			className='relative h-[800px] md:h-[1150px] lg:h-[800px] xl:h-[830px] 2xl:h-[950px]  grid grid-cols-12'
+			dir={i18n.language == "en" ? "ltr" : "rtl"}
+		>
 			<div className='border-r-[1px] border-l-[1px] border-gray-300 col-span-4' />
 			<div className='border-r-[1px] border-gray-300 col-span-4' />
 			<div className='border-r-[1px] border-gray-300 col-span-4' />
@@ -38,7 +43,7 @@ const Location = () => {
 				<div className='lg:grid lg:grid-cols-12 max-lg:space-y-8'>
 					<div className='lg:px-10 xl:px-16 col-span-4 space-y-4 lg:space-y-8 max-lg:px-8'>
 						<p className='font-bold text-bigger lg:text-huge'>
-							Site Location Masterplan
+							{t("locationTitle")}
 						</p>
 						<Element color={"#27AE60"} name={"Apartment Club House"} />
 						<Element color={"#D35400"} name={"Lagoon"} />
