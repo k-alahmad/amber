@@ -241,7 +241,7 @@ const FloorPlan = () => {
 	};
 	return (
 		<div
-			className='relative h-[1500px] lg:h-[1050px] grid grid-cols-12 '
+			className='relative h-[1500px] lg:h-[1050px] grid grid-cols-12 my-6'
 			dir={i18n.language == "en" ? "" : "rtl"}
 		>
 			<div className='border-r-[1px] border-l-[1px] border-gray-300 col-span-4' />
@@ -449,13 +449,17 @@ const FloorPlan = () => {
 							{floorData.map((d, i) => {
 								return (
 									<div>
-										{d.name}
-										<img
+										<LazyImage
 											key={i}
 											src={d.image}
 											alt={d.name}
-											className='h-[500px] xl:h-[600px] w-full object-conatin rounded'
+											imgStyle={
+												"h-[500px] xl:h-[600px] w-full object-conatin rounded"
+											}
 										/>
+										<p className='justify-center text-lg font-bold  flex'>
+											{d.name}
+										</p>
 									</div>
 								);
 							})}
