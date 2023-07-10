@@ -58,7 +58,7 @@ const HeaderTemp = () => {
 	return (
 		<>
 			<div
-				className=' flex justify-center max-w-screen overflow-hidden items-center md:hidden pb-12'
+				className=' flex justify-center max-w-screen overflow-hidden items-center md:hidden pb-8'
 				style={{
 					width: width,
 				}}

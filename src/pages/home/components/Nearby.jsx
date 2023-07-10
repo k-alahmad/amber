@@ -215,7 +215,7 @@ const Nearby = () => {
 		);
 	};
 	return (
-		<div className='bg-[#222222] relative h-[900px] md:h-[950px] lg:h-[700px] 2xl:h-[850px] grid grid-cols-12 overflow-hidden'>
+		<div className='bg-[#222222] relative h-[900px] md:h-[950px] lg:h-[700px] 2xl:h-[850px] grid grid-cols-12 mt-12 overflow-hidden'>
 			<div className='border-r-[1px] border-l-[1px] border-white/20' />
 			<div className='border-r-[1px] border-white/20' />
 			<div className='border-r-[1px] border-white/20' />

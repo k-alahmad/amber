@@ -240,7 +240,7 @@ const FloorPlan = () => {
 	};
 	return (
 		<div
-			className='relative h-[1500px] lg:h-[1050px] grid grid-cols-12'
+			className='relative h-[1500px] lg:h-[1050px] grid grid-cols-12 '
 			dir={i18n.language == "en" ? "" : "rtl"}
 		>
 			<div className='border-r-[1px] border-l-[1px] border-gray-400 col-span-4' />

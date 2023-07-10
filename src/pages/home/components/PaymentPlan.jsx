@@ -30,7 +30,7 @@ const PaymentPlan = () => {
 			<div className='border-r-[1px] border-gray-400 col-span-4' />
 			<div className='border-r-[1px] border-gray-400 col-span-4' />
 
-			<div className='absolute h-full w-full xl:grid xl:grid-cols-12 max-lg:space-y-2 max-lg:pt-32'>
+			<div className='absolute h-full w-full xl:grid xl:grid-cols-12 max-lg:space-y-2 max-lg:pt-24'>
 				<div className='col-span-4 flex justify-start items-center font-bold text-huge xl:p-12 max-xl:px-4'>
 					{t("PaymentPlan")}
 				</div>
@@ -62,7 +62,7 @@ const PaymentPlan = () => {
 						/> */}
 					</div>
 				</div>
-				<div className='col-span-4 flex flex-col justify-center items-center xl:items-start max-xl:pt-40 xl:p-12'>
+				<div className='col-span-4 flex flex-col justify-center items-center xl:items-start max-xl:pt-28 xl:p-12'>
 					<p className='text-big font-medium'>{t("price")} </p>
 					<p className='text-huge font-bold'>AED1.2M</p>
 				</div>
