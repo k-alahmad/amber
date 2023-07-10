@@ -12,10 +12,10 @@ const Home = () => {
 	return (
 		<div>
 			<HeaderTemp />
-			<Nearby />
-			<Location />
-			<FloorPlan />
 			<PaymentPlan />
+			<Nearby />
+			<FloorPlan />
+			<Location />
 			<Register />
 			<Brochure />
 		</div>

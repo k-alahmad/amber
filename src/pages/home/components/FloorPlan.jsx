@@ -239,13 +239,16 @@ const FloorPlan = () => {
 		);
 	};
 	return (
-		<div className='relative h-[1500px] lg:h-[1050px] grid grid-cols-12'>
+		<div
+			className='relative h-[1500px] lg:h-[1050px] grid grid-cols-12'
+			dir={i18n.language == "en" ? "" : "rtl"}
+		>
 			<div className='border-r-[1px] border-l-[1px] border-gray-400 col-span-4' />
 			<div className='border-r-[1px] border-gray-400 col-span-4' />
 			<div className='border-r-[1px] border-gray-400 col-span-4' />
 			<div className='absolute pt-16 bg-transparent h-full w-full'>
 				<div
-					className='text-huge font-bold lg:w-[30%] w-[90%] px-[5%]'
+					className='text-huge font-bold lg:w-[35%] w-[90%] px-[5%]'
 					dir={i18n.language == "en" ? "" : "rtl"}
 				>
 					{t("floorTitle")}
@@ -448,7 +451,7 @@ const FloorPlan = () => {
 										key={i}
 										src={d.image}
 										alt=''
-										className='h-[500px] xl:h-[700px] w-full object-conatin rounded'
+										className='h-[500px] xl:h-[600px] w-full object-conatin rounded'
 									/>
 								);
 							})}
