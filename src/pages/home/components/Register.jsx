@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import photo1 from "../../../assets/images/photo1.webp";
+import photo1 from "../../../assets/images/register.webp";
 import {
 	MdLocationOn,
 	MdMail,
