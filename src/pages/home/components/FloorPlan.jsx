@@ -25,29 +25,35 @@ import {
 import LazyImage from "../../../components/UI/LazyImage";
 import RegisterModal from "./RegisterModal";
 import { useDispatch, useSelector } from "react-redux";
-import { selectRegisterState, showModal } from "../../../redux/modal.slice";
+import {
+  counterIsFull,
+  counterIsNotFull,
+  selectCounterState,
+  selectRegisterState,
+  showModal,
+} from "../../../redux/modal.slice";
 const FloorPlan = () => {
   const dispatch = useDispatch();
   const registerState = useSelector(selectRegisterState);
+  const counterState = useSelector(selectCounterState);
   const { i18n, t } = useTranslation();
   const [selected, setSelected] = useState(0);
   const [disablebtn, setDisableBtn] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [ViewCounter, setViewCounter] = useState(0);
 
-  let CounterFull = JSON.parse(localStorage.getItem("CounterFull")) ?? false;
-
-  let Registered =
-    JSON.parse(localStorage.getItem("Registered")) ?? registerState;
-
   useEffect(() => {
-    if (Registered !== true) {
+    console.log(counterState);
+    console.log(registerState);
+    if (registerState !== true) {
       if (ViewCounter >= 3)
-        if (CounterFull !== true) localStorage.setItem("CounterFull", true);
+        if (counterState !== true) {
+          dispatch(counterIsFull());
+        }
     } else {
-      localStorage.setItem("CounterFull", false);
+      dispatch(counterIsNotFull());
     }
-  }, [ViewCounter, Registered, CounterFull, registerState]);
+  }, [ViewCounter, counterState, registerState]);
 
   let floorData = [
     {
@@ -223,7 +229,7 @@ const FloorPlan = () => {
       <button
         disabled={i == selected || disablebtn}
         onClick={() => {
-          if (!CounterFull) {
+          if (!counterState) {
             slideRef1.current.slickGoTo(i);
             slideRef2.current.slickGoTo(i);
             setSelected(i);
@@ -513,7 +519,7 @@ const FloorPlan = () => {
           </div>
         </div>
       </div>
-      <RegisterModal Registered={Registered} />
+      <RegisterModal />
     </div>
   );
 };
