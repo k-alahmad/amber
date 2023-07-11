@@ -8,11 +8,18 @@ import {
   MdPerson,
   //   MdMessage
 } from "react-icons/md";
-import { useDispatch } from "react-redux";
-import { hideModal, register, counterIsFull } from "../../../redux/modal.slice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  hideModal,
+  register,
+  counterIsFull,
+  selectDownloadState,
+  selectRegisterState,
+} from "../../../redux/modal.slice";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import emailjs from "@emailjs/browser";
+import Brochure from "../../../assets/pdf/330.pdf";
 
 const SocialElement = ({ icon, name }) => {
   return (
@@ -44,7 +51,8 @@ const CustomInput = ({ icon, placeholder, name, id, value, onChange }) => {
 function Register({ absolute }) {
   const dispatch = useDispatch();
   const { i18n, t } = useTranslation();
-
+  const downloadState = useSelector(selectDownloadState);
+  const registerState = useSelector(selectRegisterState);
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -71,17 +79,23 @@ function Register({ absolute }) {
     let formData = new FormData(form.current);
     try {
       // const response = await fetch(
-      // 	"https://hooks.zapier.com/hooks/catch/12792925/3mu1uvg/",
-      // 	{
-      // 		method: "POST",
-      // 		body: formData,
-      // 		"Content-Type": "multipart/form-data",
-      // 	},
+      //   "https://hooks.zapier.com/hooks/catch/12792925/3mu1uvg/",
+      //   {
+      //     method: "POST",
+      //     body: formData,
+      //     "Content-Type": "multipart/form-data",
+      //   }
       // );
       // const result = response.json();
-      //   console.log("Success:", result);
-      //   sendEmail(e);
-      alert("thanks ");
+      // console.log("Success:", result);
+      sendEmail(e);
+      if (downloadState && registerState) {
+        let alink = document.createElement("a");
+        alink.href = Brochure;
+        alink.download = "BrochurePdf.pdf";
+        alink.click();
+      }
+
       dispatch(register());
       dispatch(counterIsFull());
       dispatch(hideModal());
@@ -96,9 +110,15 @@ function Register({ absolute }) {
       className={`md:grid md:grid-cols-12  bg-transparent`}
     >
       <div className="col-span-8 p-8 lg:px-16 xl:grid xl:grid-cols-12 gap-6">
+        {downloadState && registerState && (
+          <div className="col-span-12 text-big lg:text-bigger font-bold text-red-800 flex justify-center items-center">
+            Please Register To Download the Brochure
+          </div>
+        )}
         <div className="col-span-6 space-y-12 flex flex-col justify-center items-stretch">
           <p className="font-bold text-bigger xl:text-huge ">{t("slogan")}</p>
           <p className="font-light text-small">{t("formSubTitle")}</p>
+
           <div className="space-y-6 pt-8">
             <SocialElement
               icon={<MdLocationOn className="text-white" />}
