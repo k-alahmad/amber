@@ -15,11 +15,9 @@ const modalSlice = createSlice({
     },
     hideModal: (state, action) => {
       state.open = false;
+      state.download = false;
     },
     downloadBrochure: (state, action) => {
-      state.download = true;
-    },
-    notDownloadBrochure: (state, action) => {
       state.download = true;
     },
     register: (state, aciton) => {
@@ -45,7 +43,6 @@ export const {
   counterIsFull,
   counterIsNotFull,
   downloadBrochure,
-  notDownloadBrochure,
 } = modalSlice.actions;
 export const selectModal = (state) => state.modal;
 export const selectState = (state) => state.modal.open;

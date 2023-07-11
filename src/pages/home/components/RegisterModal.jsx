@@ -38,7 +38,7 @@ export default function Modal() {
           >
             <MdClose size={50} />
           </div>
-          <Register />
+          <Register modal={true} />
         </div>
       </div>
       <div

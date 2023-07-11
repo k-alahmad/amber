@@ -23,7 +23,6 @@ import {
   MdOutlineFiberManualRecord as OutFiberManualRecordIcon,
 } from "react-icons/md";
 import LazyImage from "../../../components/UI/LazyImage";
-import RegisterModal from "./RegisterModal";
 import { useDispatch, useSelector } from "react-redux";
 import {
   counterIsFull,
@@ -519,7 +518,6 @@ const FloorPlan = () => {
           </div>
         </div>
       </div>
-      <RegisterModal />
     </div>
   );
 };
