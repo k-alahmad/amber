@@ -95,7 +95,6 @@ function Register({ modal }) {
         alink.download = "BrochurePdf.pdf";
         alink.click();
       }
-
       dispatch(register());
       dispatch(counterIsFull());
       dispatch(hideModal());
@@ -106,7 +105,7 @@ function Register({ modal }) {
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
-  const disableOnClick = (event) => (event.currentTarget.disabled = true);
+  //   const disableOnClick = (event) => (event.currentTarget.disabled = true);
 
   return (
     <div
@@ -174,8 +173,11 @@ function Register({ modal }) {
           />
           <button
             className="bg-[#222222] text-white text-small w-full py-4 disabled:bg-slate-400 "
-            disabled={!email || !fullName || !phone}
-            onClick={disableOnClick}
+            disabled={
+              email.replace(/ /g, "") == "" ||
+              fullName.replace(/ /g, "") == "" ||
+              phone.length < 12
+            }
           >
             {t("register")}
           </button>

@@ -1,12 +1,17 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import BrochureImg from "../../../assets/images/Brochure.webp";
-import { useDispatch } from "react-redux";
-import { downloadBrochure, showModal } from "../../../redux/modal.slice";
-
+import { useDispatch, useSelector } from "react-redux";
+import {
+  downloadBrochure,
+  selectRegisterState,
+  showModal,
+} from "../../../redux/modal.slice";
+import BrochurePdf from "../../../assets/pdf/330.pdf";
 const Brochure = () => {
   const { i18n, t } = useTranslation();
   const dispatch = useDispatch();
+  const registerState = useSelector(selectRegisterState);
   return (
     <div className="bg-lightBlack w-full  px-[10%] flex flex-col justify-center items-center">
       <img
@@ -26,8 +31,15 @@ const Brochure = () => {
           <button
             className="bg-white rounded-md font-bold p-2 text-lg hover:bg-gray-500 text-lightBlack w-full lg:w-[280px]"
             onClick={() => {
-              dispatch(downloadBrochure());
-              dispatch(showModal());
+              if (registerState) {
+                let alink = document.createElement("a");
+                alink.href = BrochurePdf;
+                alink.download = "BrochurePdf.pdf";
+                alink.click();
+              } else {
+                dispatch(downloadBrochure());
+                dispatch(showModal());
+              }
             }}
           >
             {t("download")}
