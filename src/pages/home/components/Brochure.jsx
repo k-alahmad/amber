@@ -48,7 +48,7 @@ const Brochure = () => {
 				<img
 					src={BrochureImg}
 					alt='Brochure'
-					className='h-[300px] w-full object-fill col-start-4 col-span-2 -mt-28 hidden lg:block relative'
+					className=' object-fill col-start-4 col-span-2 -mt-28 hidden lg:block relative'
 				/>
 			</div>
 			<div className='h-[1px] w-full bg-gray-500 relative ' />

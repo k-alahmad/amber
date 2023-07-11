@@ -39,8 +39,9 @@ const Nearby = () => {
 					slidesToShow: 3,
 					rows: 3,
 					slidesToScroll: 4,
-					infinite: false,
+					infinite: true,
 					dots: true,
+					speed: 500,
 					beforeChange: (prev, next) => {
 						setCurrentSlide(next == 0 ? next : Math.round(next / 4));
 					},
@@ -53,7 +54,8 @@ const Nearby = () => {
 					slidesToShow: 2,
 					slidesToScroll: 2,
 					rows: 2,
-					infinite: false,
+					speed: 500,
+					infinite: true,
 					dots: true,
 					beforeChange: (prev, next) => {
 						setCurrentSlide(next == 0 ? next : Math.round(next / 2));
@@ -67,8 +69,9 @@ const Nearby = () => {
 					slidesToShow: 2,
 					slidesToScroll: 2,
 					rows: 1,
-					infinite: false,
+					infinite: true,
 					dots: true,
+					speed: 500,
 					beforeChange: (prev, next) => {
 						setCurrentSlide(next == 0 ? next : Math.round(next / 1));
 					},
@@ -81,8 +84,9 @@ const Nearby = () => {
 					slidesToShow: 4,
 					slidesToScroll: 4,
 					// rows: 1,
-					infinite: false,
+					infinite: true,
 					dots: true,
+					speed: 500,
 					beforeChange: (prev, next) => {
 						setCurrentSlide(next == 0 ? next : Math.round(next / 3));
 					},
@@ -95,8 +99,9 @@ const Nearby = () => {
 					slidesToShow: 3,
 					slidesToScroll: 3,
 					rows: 1,
-					infinite: false,
+					infinite: true,
 					dots: true,
+					speed: 500,
 					beforeChange: (prev, next) => {
 						setCurrentSlide(next == 0 ? next : Math.round(next / 3));
 					},
@@ -109,7 +114,8 @@ const Nearby = () => {
 					slidesToShow: 2,
 					slidesToScroll: 2,
 					rows: 1,
-					infinite: false,
+					infinite: true,
+					speed: 500,
 					dots: true,
 					beforeChange: (prev, next) => {
 						setCurrentSlide(next == 0 ? next : Math.round(next / 2));
@@ -237,7 +243,14 @@ const Nearby = () => {
 						{t("nearbySubTitle")}
 					</p>
 					<div className='py-5 lg:py-16 max-w-full flex justify-center items-center'>
-						<Slider {...settings} arrows={false} speed={1000} touchMove>
+						<Slider
+							{...settings}
+							arrows={false}
+							autoplay
+							autoplaySpeed={4000}
+							speed={1000}
+							touchMove
+						>
 							{data.map((e, i) => {
 								return (
 									<GridElement
