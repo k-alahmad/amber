@@ -175,7 +175,7 @@ function Register({ modal }) {
 						{t("register")}
 					</button>
 				</form>
-				<div className='space-y-6 pt-8'>
+				<div className='space-y-6 pt-8 lg:pt-2 lg:col-span-6'>
 					<SocialElement
 						icon={<MdLocationOn className='text-white' />}
 						name={t("address")}
