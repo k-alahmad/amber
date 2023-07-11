@@ -215,18 +215,18 @@ const Nearby = () => {
 	};
 	return (
 		<div className='bg-[#222222] relative h-[900px] md:h-[950px] lg:h-[700px] 2xl:h-[850px] grid grid-cols-12  overflow-hidden'>
-			<div className='border-r-[1px] border-l-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
-			<div className='border-r-[1px] border-white/20' />
+			<div className='border-r-[1px] border-l-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
+			<div className='border-r-[1px] border-white/10' />
 			<div className='absolute h-full w-full text-white lg:grid lg:grid-cols-12'>
 				<div
 					className='lg:px-10 xl:px-16 col-span-5 py-7 max-lg:px-8'

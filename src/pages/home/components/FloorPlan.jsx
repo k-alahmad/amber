@@ -252,9 +252,9 @@ const FloorPlan = () => {
 			className='relative h-[1650px] lg:h-[900px] grid grid-cols-12 '
 			dir={i18n.language == "en" ? "" : "rtl"}
 		>
-			<div className='border-r-[1px] border-l-[1px] border-gray-300 col-span-4' />
-			<div className='border-r-[1px] border-gray-300 col-span-4' />
-			<div className='border-r-[1px] border-gray-300 col-span-4' />
+			<div className='border-r-[1px] border-l-[1px] border-gray-200 col-span-4' />
+			<div className='border-r-[1px] border-gray-200 col-span-4' />
+			<div className='border-r-[1px] border-gray-200 col-span-4' />
 			<div className='absolute pt-16 bg-transparent h-full w-full'>
 				<div
 					className='text-huge font-bold lg:w-[35%] w-[90%] px-[5%]'

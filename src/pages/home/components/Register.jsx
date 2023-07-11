@@ -121,13 +121,6 @@ function Register({ modal }) {
 				<div className='col-span-6 space-y-12 flex flex-col justify-center items-stretch'>
 					<p className='font-bold text-bigger xl:text-huge '>{t("slogan")}</p>
 					<p className='font-light text-small'>{t("formSubTitle")}</p>
-
-					<div className='space-y-6 pt-8'>
-						<SocialElement
-							icon={<MdLocationOn className='text-white' />}
-							name={t("address")}
-						/>
-					</div>
 				</div>
 				<form
 					ref={form}
@@ -182,6 +175,12 @@ function Register({ modal }) {
 						{t("register")}
 					</button>
 				</form>
+				<div className='space-y-6 pt-8'>
+					<SocialElement
+						icon={<MdLocationOn className='text-white' />}
+						name={t("address")}
+					/>
+				</div>
 			</div>
 			<div className='col-span-4 '>
 				<img

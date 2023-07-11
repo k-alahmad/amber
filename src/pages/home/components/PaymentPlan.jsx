@@ -26,9 +26,9 @@ const PaymentPlan = () => {
 			className='relative h-[600px] sm:h-[600px] xl:h-[400px] grid grid-cols-12 border-b-[1px]  '
 			dir={i18n.language == "en" ? "" : "rtl"}
 		>
-			<div className='border-r-[1px] border-l-[1px] border-gray-300 col-span-4' />
-			<div className='border-r-[1px] border-gray-300 col-span-4' />
-			<div className='border-r-[1px] border-gray-300 col-span-4' />
+			<div className='border-r-[1px] border-l-[1px] border-gray-200 col-span-4' />
+			<div className='border-r-[1px] border-gray-200 col-span-4' />
+			<div className='border-r-[1px] border-gray-200 col-span-4' />
 
 			<div className='absolute h-full w-full xl:grid xl:grid-cols-12 max-lg:space-y-2 max-lg:pt-24'>
 				<div className='col-span-4 flex justify-start items-center font-bold text-huge xl:p-12 max-xl:px-4'>
