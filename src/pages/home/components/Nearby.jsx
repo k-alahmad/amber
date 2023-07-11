@@ -208,7 +208,7 @@ const Nearby = () => {
 					index == selectedIndex ? "bg-white/70 shadow-lg shadow-white/40" : ""
 				}`}
 			>
-				<img src={icon} alt='' className='h-12 w-10 ' />
+				<img src={icon} alt='Grid Image' className='h-12 w-10 ' />
 				<p className='text-smaller font-bold'> {name}</p>
 				<p className=' font-extralight text-tiny'> {duration} </p>
 			</div>
@@ -266,7 +266,11 @@ const Nearby = () => {
 					transition={{ duration: 0.5 }}
 					className='col-start-6 col-span-7 bg-cyan-600'
 				>
-					<img src={data[selectedIndex].img} alt='' className='h-full w-full' />
+					<img
+						src={data[selectedIndex].img}
+						alt='Nearby Image'
+						className='h-full w-full'
+					/>
 				</motion.div>
 			</div>
 		</div>

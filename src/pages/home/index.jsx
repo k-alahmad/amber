@@ -8,22 +8,23 @@ import Brochure from "./components/Brochure";
 import RegisterContainer from "./components/RegisterContainer";
 
 const Home = () => {
-  return (
-    <>
-      <div id="home" />
-      <HeaderTemp />
-      <div id="payment" />
-      <PaymentPlan />
-      <div id="nearby" />
-      <Nearby />
-      <div id="floorPlan" />
-      <FloorPlan />
-      <div id="location" />
-      <Location />
-      <RegisterContainer />
-      <Brochure />
-    </>
-  );
+	return (
+		<>
+			<div id='home' />
+			<HeaderTemp />
+			<div id='payment' />
+			<PaymentPlan />
+			<div id='floorPlan' />
+			<FloorPlan />
+			<div id='nearby' />
+			<Nearby />
+			<div id='location' />
+			<Location />
+			<div id='contactus' />
+			<RegisterContainer />
+			<Brochure />
+		</>
+	);
 };
 
 export default Home;
