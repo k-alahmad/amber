@@ -58,7 +58,7 @@ i18n.use(initReactI18next).init({
 				address: "مكتب 609 ، برج كلوفر باي - 6 أ مراسي - الخليج التجاري - دبي",
 				locationTitle: "المخطط الرئيسي للموقع",
 				brochurMSG: "الرجاء التسجيل لتنزيل الكتيب",
-				roomCode: "كود ",
+				roomCode: "كود: ",
 			},
 		},
 		en: {
@@ -74,7 +74,7 @@ i18n.use(initReactI18next).init({
 				menu: "Menu",
 				register: "Register Now",
 				download: "Download",
-				roomCode: "Code:",
+				roomCode: "Code: ",
 				HeaderTitleOne: "Unveil a soul-stirring experience",
 				HeaderSubTitleOne:
 					"as you surrender to the enchanting call of the water in your vicinity",
@@ -171,7 +171,7 @@ i18n.use(initReactI18next).init({
 				address: "دبی - بیزینس بی - ساختمان کلاور بی - واحد ۶۰۹",
 				locationTitle: "موقعیت پروژه و مستر پلان",
 				brochurMSG: "لطفا برای دانلود بروشور ثبت نام کنید",
-				roomCode: "کد:",
+				roomCode: "کد: ",
 			},
 		},
 	},
