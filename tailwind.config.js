@@ -8,20 +8,20 @@ export default {
       keyframes: {
         camera: {
           "0% ": { "object-position": "left" },
-          "25% ": { "object-position": "center" },
+          // "25% ": { "object-position": "center" },
           "50% ": { "object-position": "right" },
-          "75% ": { "object-position": "center" },
+          // "75% ": { "object-position": "center" },
           "100% ": { "object-position": "left" },
         },
         textCamera: {
-          "0% ": { left: "50%" },
-          "50% ": { left: "-50%" },
-          "100% ": { left: "50%" },
+          "0% ": { left: "-50%" },
+          "50% ": { left: "50%" },
+          "100% ": { left: "-50%" },
         },
       },
       animation: {
-        camera: "camera 15s ease-in-out infinite",
-        textCamera: "textCamera 30s ease-in-out infinite",
+        camera: "camera 20s ease-in-out infinite",
+        textCamera: "textCamera 20s ease-in-out infinite",
       },
       fontSize: {
         ExtraHuge: "108px",
