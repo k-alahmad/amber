@@ -26,9 +26,9 @@ const PaymentPlan = () => {
 			className='relative h-[600px] sm:h-[600px] xl:h-[400px] grid grid-cols-12 border-b-[1px]  '
 			dir={i18n.language == "en" ? "" : "rtl"}
 		>
-			<div className='border-r-[1px] border-l-[1px] border-gray-200 col-span-4' />
-			<div className='border-r-[1px] border-gray-200 col-span-4' />
-			<div className='border-r-[1px] border-gray-200 col-span-4' />
+			<div className='border-r-[1px] border-l-[1px] border-gray-800 col-span-4' />
+			<div className='border-r-[1px] border-gray-800 col-span-4' />
+			<div className='border-r-[1px] border-gray-800 col-span-4' />
 
 			<div className='absolute h-full w-full xl:grid xl:grid-cols-12 max-lg:space-y-2 max-lg:pt-24'>
 				<div className='col-span-4 flex justify-start items-center font-bold text-huge xl:p-12 max-xl:px-4'>
@@ -39,20 +39,25 @@ const PaymentPlan = () => {
 						{t("PaymentPlanType")}
 					</p>
 					<div className='relative flex flex-col w-full'>
-						<div className=' w-full h-[2px] bg-black self-center ' />
+						<div className=' w-full h-[2px] bg-[#909090] self-center ' />
 						<Circle
 							number={20}
 							customStyle={"left-[4%] capitalize"}
 							text={t("BookingAmount")}
 						/>
 						<Circle
-							number={60}
-							customStyle={"left-[40%] capitalize"}
+							number={10}
+							customStyle={"left-[30%] capitalize"}
 							text={t("installments")}
 						/>
 						<Circle
-							number={20}
-							customStyle={"left-[75%] capitalize"}
+							number={40}
+							customStyle={"left-[55%] capitalize"}
+							text={t("installments")}
+						/>
+						<Circle
+							number={30}
+							customStyle={"left-[78%] capitalize"}
 							text={t("finalInsallment")}
 						/>
 						{/* <Circle
@@ -64,7 +69,7 @@ const PaymentPlan = () => {
 				</div>
 				<div className='col-span-4 flex flex-col justify-center items-center xl:items-start max-xl:pt-28 xl:p-12'>
 					<p className='text-big font-medium'>{t("price")} </p>
-					<p className='text-huge font-bold'>AED1.2M</p>
+					<p className='text-huge font-bold'>AED598K</p>
 				</div>
 			</div>
 		</div>

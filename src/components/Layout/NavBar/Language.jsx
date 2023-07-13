@@ -37,9 +37,9 @@ export default function Dropdown() {
 					onClick={() => setOpen(!open)}
 				>
 					{/* <RiEnglishInput size={20} color='#3b3b3b' /> */}
-					<div className='flex border-r-2 border-lightGreyOP'>
-						<p className='text-lightBlack block px-2'>{t("code")}</p>
-						<IoIosArrowDown size={24} color='#3b3b3b' className='mx-2' />
+					<div className='flex border-r-2 border-white'>
+						<p className='text-white block px-2'>{t("code")}</p>
+						<IoIosArrowDown size={24} color='#ffff' className='mx-2' />
 					</div>
 				</div>
 

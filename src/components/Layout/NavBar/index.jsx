@@ -39,14 +39,14 @@ const NavBar = () => {
 	}, []);
 	return (
 		<>
-			<div className='flex flex-col justify-center items-center '>
+			<div className='flex flex-col bg-[#36454f] justify-center items-center '>
 				<div
 					dir={i18n.language == "en" ? "" : "rtl"}
 					className={`${
 						header
 							? "shadow-2xl w-[95%] lg:w-[80%] translate-y-2"
 							: "w-[95%] translate-y-0"
-					}   border-white border-2 bg-white transition-all duration-500 z-40 fixed rounded-2xl max-lg:px-3`}
+					}   border-[#36454f] border-2 bg-[#36454f] text-white transition-all duration-500 z-40 fixed rounded-2xl max-lg:px-3`}
 				>
 					<div
 						className={`flex justify-evenly lg:justify-between items-center h-16`}
@@ -56,19 +56,19 @@ const NavBar = () => {
 								className='flex justify-center items-center px-[3%] cursor-pointer'
 								onClick={() => dispatch(showModal())}
 							>
-								<FaPlus color='#222222' className='animate-pulse' />
-								<p className='text-lightBlack font-normal uppercase leading-[14.4px] tracking-[2.4px] p-4 '>
+								<FaPlus color='#ffff' className='animate-pulse' />
+								<p className='text-white font-normal uppercase leading-[14.4px] tracking-[2.4px] p-4 '>
 									{t("register")}
 								</p>
 							</div>
 						</div>
 						<Dropdown />
-						<p className='-mr-6 text-lightBlack max-lg:hidden'>{t("menu")}</p>
+						<p className='-mr-6 text-white max-lg:hidden'>{t("menu")}</p>
 						<div
 							onClick={() => setMobileOpen(true)}
 							className=' lg:px-8 block cursor-pointer'
 						>
-							<MdDehaze size={24} color='#222222' />
+							<MdDehaze size={24} color='#ffff' />
 						</div>
 					</div>
 				</div>

@@ -13,7 +13,7 @@ const Brochure = () => {
 	const dispatch = useDispatch();
 	const registerState = useSelector(selectRegisterState);
 	return (
-		<div className='bg-lightBlack w-full  px-[10%] flex flex-col justify-center items-center'>
+		<div className='bg-[#101314] w-full  px-[10%] flex flex-col justify-center items-center'>
 			<img
 				src={BrochureImg}
 				alt='Brochure'
