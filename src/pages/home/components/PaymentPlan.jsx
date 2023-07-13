@@ -6,7 +6,7 @@ const Circle = ({ number, customStyle, text }) => {
 			className={`absolute ${customStyle} -top-10 sm:-top-12 w-24 sm:w-28 flex flex-col justify-center items-center`}
 		>
 			<div
-				className={`bg-[#222222]/20 rounded-full w-20 h-20  sm:w-24 sm:h-24  flex justify-center items-center `}
+				className={`bg-[#36454f]/20 rounded-full w-20 h-20  sm:w-24 sm:h-24  flex justify-center items-center `}
 			>
 				<div className='bg-[#222222] rounded-full w-14 h-14 sm:w-16 sm:h-16 flex justify-center items-center text-white font-medium text-small '>
 					{number}%

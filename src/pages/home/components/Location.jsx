@@ -26,7 +26,7 @@ const Location = () => {
 	const { i18n, t } = useTranslation();
 	return (
 		<div
-			className='relative h-[800px] md:h-[1150px] lg:h-[800px] xl:h-[830px] 2xl:h-[950px]  grid grid-cols-12'
+			className='relative h-[800px] md:h-[1150px] lg:h-[800px] xl:h-[830px] 2xl:h-[950px]  grid grid-cols-12 mb-16'
 			dir={i18n.language == "en" ? "ltr" : "rtl"}
 		>
 			<div className='border-r-[1px] border-l-[1px] border-gray-800 col-span-4' />
@@ -54,7 +54,7 @@ const Location = () => {
 						<img
 							src={photo2}
 							alt='Site Location Image'
-							className='h-full w-full'
+							className='flex relative h-[800px] w-full'
 						/>
 					</div>
 				</div>

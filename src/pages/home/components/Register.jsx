@@ -173,7 +173,7 @@ function Register({ modal }) {
 						}}
 					/>
 					<button
-						className='bg-[#222222] text-white text-small w-full py-4 disabled:bg-slate-400 '
+						className='bg-[#0047ab] rounded-md text-white text-small w-full py-4 hover:bg-[#0047ab77] disabled:bg-[#36454f] '
 						disabled={
 							email.replace(/ /g, "") == "" ||
 							fullName.replace(/ /g, "") == "" ||

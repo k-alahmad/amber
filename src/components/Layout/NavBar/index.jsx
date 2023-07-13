@@ -46,7 +46,7 @@ const NavBar = () => {
 						header
 							? "shadow-2xl w-[95%] lg:w-[80%] translate-y-2"
 							: "w-[95%] translate-y-0"
-					}   border-[#36454f] border-2 bg-[#36454f] text-white transition-all duration-500 z-40 fixed rounded-2xl max-lg:px-3`}
+					}   border-[#212b3167] border-2 bg-[#36454f] text-white transition-all duration-500 z-40 fixed rounded-2xl max-lg:px-3`}
 				>
 					<div
 						className={`flex justify-evenly lg:justify-between items-center h-16`}

@@ -28,7 +28,7 @@ export default function Modal() {
 			>
 				<div
 					ref={ref}
-					className='rounded-lg shadow-lg relative flex flex-col bg-lightBlack outline-none focus:outline-none overflow-x-hidden overflow-y-scroll max-h-screen max-w-[95%] xl:max-w-[80%]'
+					className='rounded-lg shadow-lg relative flex flex-col bg-[#101314] outline-none focus:outline-none overflow-x-hidden overflow-y-scroll max-h-screen max-w-[95%] xl:max-w-[80%]'
 				>
 					<div
 						onClick={() => {
@@ -36,7 +36,7 @@ export default function Modal() {
 						}}
 						className='cursor-pointer font-bold self-center text-black hover:scale-125 hover:rotate-180 fixed md:absolute right-5 top-3 transition-all duration-300'
 					>
-						<MdClose size={50} />
+						<MdClose size={50} color='white' />
 					</div>
 					<Register modal={true} />
 				</div>

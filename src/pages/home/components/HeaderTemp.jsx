@@ -135,9 +135,7 @@ const HeaderTemp = () => {
 									<LazyImage
 										src={heroRight}
 										alt={"Hero Right"}
-										imgStyle={
-											"relative object-cover w-[200%] h-full animate-camera"
-										}
+										imgStyle={"relative object-cover  h-full animate-camera"}
 									/>
 								</div>
 							</div>
