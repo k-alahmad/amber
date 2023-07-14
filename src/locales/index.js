@@ -17,12 +17,11 @@ i18n.use(initReactI18next).init({
 				menu: "القائمة",
 				register: "سجل الآن",
 				download: "تحميل",
-				HeaderTitleOne: "انغمس في تجربة تناشد الحواس",
-				HeaderSubTitleOne:
-					"و تنعّم بإقامة باعثة على الاسترخاء حيث تحيط بك المياه الرقراقة من كلّ حدبٍ و صوب",
-				HeaderTitleTwo: "مناظر خلاّبة تأسر القلوب",
+				HeaderTitleOne: "العيش في منزل أحلامك ليس بعيد!",
+				HeaderSubTitleOne: "إنتقل الى منزل أحلامك في العام القادم",
+				HeaderTitleTwo: "الحياة الفاخرة في دبي بإنتظارك",
 				HeaderSubTitleTwo:
-					"تم تصميم المجمّع على شكل هلال مدبّب و ينعكس تصميمه الرائع بأبهى حلّة على المياه المتلألئة, حيث يمكنك أن تمتّع ناظريك بأروع الإطلالات بينما تستمع بإقامة في مسكن ينضح فخامة.",
+					"تمتع في العيش في منازل رائعة في موقع مميز. و إبدأ رحلتك في العيش في منزل احلامك . لا تفوت الفرصة للعيش في إحدى أكثر المدن المرغوبة في العالم.",
 				HeaderMainTitle: "مساكن تخاطب الروح",
 				palm: "نخلة الجميرة",
 				airport: "مطار دبي الدولي",
@@ -75,12 +74,11 @@ i18n.use(initReactI18next).init({
 				register: "Register Now",
 				download: "Download",
 				roomCode: "Code: ",
-				HeaderTitleOne: "Unveil a soul-stirring experience",
-				HeaderSubTitleOne:
-					"as you surrender to the enchanting call of the water in your vicinity",
-				HeaderTitleTwo: "A spectacular sight that delights",
+				HeaderTitleOne: "Living in your Dream Home isn't far away!",
+				HeaderSubTitleOne: "Move in next Year.",
+				HeaderTitleTwo: "Luxury Living in Dubai Awaits!",
 				HeaderSubTitleTwo:
-					"Designed like a tapered crescent, catch the reflected hues of the cluster, dazzle in the reflections of the crystal-clear water as you unwind in luxury",
+					"Discover Exquisite Residences in Prime Locations. Embark on your journey to find your dream home in Dubai. Experience luxury living at its finest with our exclusive residences. Don't miss out on this unique opportunity to live in one of the world's most desirable cities.",
 				HeaderMainTitle: "Specially Designed Residences",
 				palm: "Plam Jumeirah",
 				airport: "Dubai Airport",

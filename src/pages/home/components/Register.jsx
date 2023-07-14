@@ -194,7 +194,7 @@ function Register({ modal }) {
 				<img
 					src={photo1}
 					alt='Register Image'
-					className='w-full max-md:h-[300px] md:h-[700px] object-cover'
+					className='w-full max-md:h-[300px] md:h-[600px] object-cover'
 				/>
 			</div>
 		</div>

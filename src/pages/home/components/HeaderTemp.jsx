@@ -33,11 +33,11 @@ const HeaderTemp = () => {
 		},
 		customPaging: (index) => {
 			return index == currentSlide ? (
-				<div key={index} className='text-lightBlack text-med py-2'>
+				<div key={index} className='text-white text-med py-2'>
 					<FiberManualRecordIcon />
 				</div>
 			) : (
-				<div key={index} className='text-lightBlack text-med py-2'>
+				<div key={index} className='text-white text-med py-2'>
 					<OutFiberManualRecordIcon />
 				</div>
 			);
@@ -86,12 +86,21 @@ const HeaderTemp = () => {
 					<div className='border-r-[1px] border-l-[1px] border-gray-800 col-span-4' />
 					<div className='border-r-[1px] border-gray-800 col-span-4 z-20' />
 					<div className='border-r-[1px] border-gray-800 col-span-4' />
-					<div className='absolute w-full h-full '>
+					<div
+						className='absolute w-full h-full '
+						dir={i18n.language == "en" ? "ltr" : "rtl"}
+					>
 						<div className='grid grid-cols-12'>
-							<div className='col-span-4 px-[3%] translate-x-[3%] '>
+							<div
+								className={`col-span-4 px-[3%] ${
+									i18n.language == "en"
+										? "translate-x-[3%]"
+										: "-translate-x-[3%]"
+								} `}
+							>
 								<div
-									dir={i18n.language == "en" ? "ltr" : "rtl"}
 									className='px-4 py-8 space-y-4 h-[350px]'
+									dir={i18n.language == "en" ? "ltr" : "rtl"}
 								>
 									<p className='text-white text-huge font-bold capitalize leading-[100%]'>
 										{t("HeaderTitleOne")}
@@ -130,7 +139,13 @@ const HeaderTemp = () => {
 									/>
 								</div>
 							</div>
-							<div className='col-span-4 px-[3%] -translate-x-[3%] '>
+							<div
+								className={`col-span-4 px-[3%] ${
+									i18n.language == "en"
+										? "-translate-x-[3%]"
+										: "translate-x-[3%]"
+								} `}
+							>
 								<div className='flex w-full h-[750px] mt-32'>
 									<LazyImage
 										src={heroRight}
@@ -141,7 +156,13 @@ const HeaderTemp = () => {
 							</div>
 						</div>
 						<div className='grid grid-cols-12'>
-							<div className='col-span-4 px-[3%] translate-x-[3%]'>
+							<div
+								className={`col-span-4 px-[3%] ${
+									i18n.language == "en"
+										? "translate-x-[3%]"
+										: "-translate-x-[3%]"
+								} `}
+							>
 								<div
 									dir={i18n.language == "en" ? "ltr" : "rtl"}
 									className='mt-24 space-y-4 px-4'
@@ -163,8 +184,16 @@ const HeaderTemp = () => {
 										imgStyle={"relative object-fill h-[800px]"}
 									/>
 									<div className='flex absolute bottom-0  w-[50%] h-[15%] bg-gradient-to-b from-white/30 backdrop-blur-sm' />
-									<div className='bg-[#101314]  absolute h-[15%] w-[50%] -top-1' />
-									<div className='bg-[#101314]  absolute h-[15%] w-[50%] -bottom-1 right-0' />
+									<div
+										className={`bg-[#101314]  absolute h-[15%] w-[50%] -top-1 ${
+											i18n.language == "en" ? "left-0" : "right-0"
+										}`}
+									/>
+									<div
+										className={`bg-[#101314]  absolute h-[15%] w-[50%] -bottom-1 right-0 ${
+											i18n.language == "en" ? "left-0" : "right-0"
+										}`}
+									/>
 								</div>
 							</div>
 							<div className='col-span-12 text-9xl bg-transparent text-white overflow-x-hidden -mt-80 pb-20'>

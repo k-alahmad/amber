@@ -48,7 +48,7 @@ export default function Dropdown() {
 					onClick={() => setOpen(false)}
 					className={`${
 						open ? "scale-100" : "scale-0"
-					} absolute z-10 mt-4 origin-top bg-white rounded-lg shadow-2xl transition-all duration-300 p-4 space-y-2  font-MED text-smaller w-40`}
+					} absolute z-10 mt-4 origin-top bg-[#36454f] border-white border-2 rounded-lg shadow-2xl transition-all duration-300 p-4 space-y-2  font-MED text-smaller w-40`}
 				>
 					<div
 						className='flex justify-start items-center'
@@ -63,7 +63,7 @@ export default function Dropdown() {
 								<MdRadioButtonUnchecked size={24} />
 							)}
 						</div>
-						<p className='text-lightBlack cursor-pointer'>{t("English")}</p>
+						<p className='text-white cursor-pointer'>{t("English")}</p>
 					</div>
 
 					<div
@@ -79,7 +79,7 @@ export default function Dropdown() {
 								<MdRadioButtonUnchecked size={24} />
 							)}
 						</div>
-						<p className='text-lightBlack cursor-pointer'>{t("Arabic")}</p>
+						<p className='text-white cursor-pointer'>{t("Arabic")}</p>
 					</div>
 					<div
 						className='flex justify-start items-center'
@@ -94,7 +94,7 @@ export default function Dropdown() {
 								<MdRadioButtonUnchecked size={24} />
 							)}
 						</div>
-						<p className='text-lightBlack cursor-pointer'>{t("Persian")}</p>
+						<p className='text-white cursor-pointer'>{t("Persian")}</p>
 					</div>
 				</div>
 			</div>
