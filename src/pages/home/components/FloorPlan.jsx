@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 //floor plan images
 import studioa from "../../../assets/images/floorplan/studioa.svg";
 import studiob from "../../../assets/images/floorplan/studiob.svg";
-import onebra from "../../../assets/images/floorplan/1bra.svg";
-import onebrb from "../../../assets/images/floorplan/1brb.svg";
-import twobra from "../../../assets/images/floorplan/2bra.svg";
-import twobrb from "../../../assets/images/floorplan/2brb.svg";
+import onebra from "../../../assets/images/floorplan/onebra.svg";
+import onebrb from "../../../assets/images/floorplan/onebrb.svg";
+import twobra from "../../../assets/images/floorplan/twobra.svg";
+import twobrb from "../../../assets/images/floorplan/twobrb.svg";
 import mainFloor from "../../../assets/images/floorplan/main.webp";
 import Slider from "react-slick";
 import {
