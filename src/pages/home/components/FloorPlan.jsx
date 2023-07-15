@@ -52,9 +52,7 @@ const FloorPlan = () => {
 			image: studioa,
 			bedRoomNumber: "Studio",
 			type: "TYPE A (with balcony)",
-			suite: "769.08 SQ.FT.",
-			balcony: "59.09 SQ.FT.",
-			total: "828.17 SQ.FT",
+			total: "458.43 SQ.FT",
 		},
 		{
 			name: "1BR",
@@ -62,9 +60,7 @@ const FloorPlan = () => {
 			image: onebra,
 			bedRoomNumber: "1BR",
 			type: "TYPE A (with balcony)",
-			suite: "583.94 SQ.FT.",
-			balcony: "55.22 SQ.FT.",
-			total: "639.16 SQ.FT",
+			total: "682.75 SQ.FT",
 		},
 		{
 			name: "2BR",
@@ -72,9 +68,7 @@ const FloorPlan = () => {
 			image: twobra,
 			bedRoomNumber: "2BR",
 			type: "TYPE A (with balcony)",
-			suite: "811.92 SQ.FT.",
-			balcony: "132.40 SQ.FT.",
-			total: "944.32 SQ.FT",
+			total: "1175.74 SQ.FT",
 		},
 		{
 			name: "Studio",
@@ -82,9 +76,7 @@ const FloorPlan = () => {
 			image: studiob,
 			bedRoomNumber: "Studio",
 			type: "TYPE B (with balcony)",
-			suite: "692.87. SQ.FT.",
-			balcony: "55.97 SQ.FT.",
-			total: "748.84 SQ.FT",
+			total: "458.43 SQ.FT",
 		},
 		{
 			name: "1BR",
@@ -92,9 +84,7 @@ const FloorPlan = () => {
 			image: onebrb,
 			bedRoomNumber: "1BR",
 			type: "TYPE B (with balcony)",
-			suite: "441.00 SQ.FT.",
-			balcony: "55.22 SQ.FT.",
-			total: "496.22 SQ.FT",
+			total: "682.75 SQ.FT",
 		},
 		{
 			name: "2BR",
@@ -102,9 +92,7 @@ const FloorPlan = () => {
 			image: twobrb,
 			bedRoomNumber: "2BR",
 			type: "TYPE B (with balcony)",
-			suite: "444.66 SQ.FT.",
-			balcony: "55.97 SQ.FT.",
-			total: "500.63 SQ.FT",
+			total: "1175.74 SQ.FT",
 		},
 	];
 	const GridElement = ({ name, onClick, index, color }) => {
@@ -288,12 +276,6 @@ const FloorPlan = () => {
 
 										<p className='font-bold text-bigger pt-12'>
 											{t("floorTotalSaleable")}
-										</p>
-										<p className='text-med text-white '>
-											{t("floorSuite")} = {d.suite}
-										</p>
-										<p className='text-med text-white '>
-											{t("floorBalcony")} = {d.balcony}
 										</p>
 										<p className='text-med text-white '>
 											{t("floorTotal")} = {d.total}

@@ -53,7 +53,7 @@ const PaymentPlan = () => {
 						<Circle
 							number={40}
 							customStyle={"left-[55%] capitalize"}
-							text={t("installments")}
+							text={t("installments2")}
 						/>
 						<Circle
 							number={30}
