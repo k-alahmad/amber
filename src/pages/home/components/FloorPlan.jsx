@@ -205,10 +205,6 @@ const FloorPlan = () => {
 							<ColorPaletteItem color={"#E3E2E2"} text={"Studio UNIT"} />
 							<ColorPaletteItem color={"#6F6F6F"} text={"1 BR UNIT"} />
 							<ColorPaletteItem color={"#A2A2A3"} text={"2 BR UNIT"} />
-							{/* <ColorPaletteItem color={"#C0E7F6"} text={"CIRCULATION"} />
-							<ColorPaletteItem color={"#BBBCBE"} text={"SERVICES"} />
-							<ColorPaletteItem color={"#D4D7EA"} text={"LIFTS"} />
-							<ColorPaletteItem color={"#5B5F62"} text={"GARBAGE ROOM"} /> */}
 						</div>
 					</div>
 					<div className='col-span-4 flex justify-center items-center sm:max-lg:pt-28'>
@@ -245,6 +241,7 @@ const FloorPlan = () => {
 						<Slider
 							ref={slideRef2}
 							dots={false}
+							arrows={false}
 							infinite={false}
 							speed={300}
 							centerMode

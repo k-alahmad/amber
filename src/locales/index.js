@@ -133,7 +133,7 @@ i18n.use(initReactI18next).init({
 				download: "دانلود",
 				HeaderTitleOne: "پرده برداری از یک تجربه منحصر به فرد",
 				HeaderSubTitleOne: "دید ابدی به دریاچه و فضای سبز",
-				HeaderTitleTwo: "منظره دیدنی",
+				HeaderTitleTwo: "لحظه شماری برای زندگی لوکس در دبی",
 				HeaderSubTitleTwo:
 					"امکانات منحصر به فرد و لاکچری شامل دریاچه مصنوعی ، فضای سبز ، کلاب گلف ...غیره",
 				HeaderMainTitle: "طراحی خاص ومتفاوت فضای مسکونی",
@@ -159,7 +159,8 @@ i18n.use(initReactI18next).init({
 				PaymentPlan: "نحوه پرداخت اقساط",
 				PaymentPlanType: "اقساط از تحویل",
 				BookingAmount: "قسط اخر",
-				installments: " ۶ قسط به فاصله ۶ ماه از یکدیگر",
+				installments: "قسط دوم و سوم هر کدام 5%",
+				installments2: "اقساط 4% به مدت 10 ماه",
 				finalInsallment: "میزان بیعانه",
 				price: "شروع قیمت از",
 				floorTitle: "پلان طبقات و واحد ها",
