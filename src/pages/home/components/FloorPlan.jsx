@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 //floor plan images
-import floor1 from "../../../assets/images/floorplan/studiob.svg";
-import floor2 from "../../../assets/images/floorplan/studiob.svg";
-import floor3 from "../../../assets/images/floorplan/XX03.svg";
-import floor4 from "../../../assets/images/floorplan/XX04.svg";
-import floor5 from "../../../assets/images/floorplan/XX05.svg";
-import floor6 from "../../../assets/images/floorplan/XX06.svg";
+import studioa from "../../../assets/images/floorplan/studioa.svg";
+import studiob from "../../../assets/images/floorplan/studiob.svg";
+import onebra from "../../../assets/images/floorplan/1bra.svg";
+import onebrb from "../../../assets/images/floorplan/1brb.svg";
+import twobra from "../../../assets/images/floorplan/2bra.svg";
+import twobrb from "../../../assets/images/floorplan/2brb.svg";
 import mainFloor from "../../../assets/images/floorplan/main.webp";
 import Slider from "react-slick";
 import {
@@ -49,9 +49,9 @@ const FloorPlan = () => {
 		{
 			name: "Studio",
 			color: "#E3E2E2",
-			image: floor1,
+			image: studioa,
 			bedRoomNumber: "Studio",
-			type: "TYPE C (with powder room + balcony) - VARIANT 3",
+			type: "TYPE A (with balcony)",
 			suite: "769.08 SQ.FT.",
 			balcony: "59.09 SQ.FT.",
 			total: "828.17 SQ.FT",
@@ -59,49 +59,49 @@ const FloorPlan = () => {
 		{
 			name: "1BR",
 			color: "#6F6F6F",
-			image: floor2,
-			bedRoomNumber: 2,
-			type: "TYPE D (with store room and powder room + balcony)",
-			suite: "692.87. SQ.FT.",
-			balcony: "55.97 SQ.FT.",
-			total: "748.84 SQ.FT",
-		},
-		{
-			name: "2BR",
-			color: "#A2A2A3",
-			image: floor3,
-			bedRoomNumber: 1.5,
-			type: "TYPE A (with store room and powder room + balcony)",
+			image: onebra,
+			bedRoomNumber: "1BR",
+			type: "TYPE A (with balcony)",
 			suite: "583.94 SQ.FT.",
 			balcony: "55.22 SQ.FT.",
 			total: "639.16 SQ.FT",
 		},
 		{
-			name: "XX04",
-			color: "#88D2D7",
-			image: floor4,
-			bedRoomNumber: 1,
-			type: "TYPE A (with balcony) - VARIANT 1",
-			suite: "441.00 SQ.FT.",
-			balcony: "55.22 SQ.FT.",
-			total: "496.22 SQ.FT",
-		},
-		{
-			name: "XX05",
-			color: "#4FC9EE",
-			image: floor5,
-			bedRoomNumber: 2,
+			name: "2BR",
+			color: "#A2A2A3",
+			image: twobra,
+			bedRoomNumber: "2BR",
 			type: "TYPE A (with balcony)",
 			suite: "811.92 SQ.FT.",
 			balcony: "132.40 SQ.FT.",
 			total: "944.32 SQ.FT",
 		},
 		{
-			name: "XX06",
-			color: "#88D2D7",
-			image: floor6,
-			bedRoomNumber: 1,
-			type: "TYPE A (with balcony)",
+			name: "Studio",
+			color: "#E3E2E2",
+			image: studiob,
+			bedRoomNumber: "Studio",
+			type: "TYPE B (with balcony)",
+			suite: "692.87. SQ.FT.",
+			balcony: "55.97 SQ.FT.",
+			total: "748.84 SQ.FT",
+		},
+		{
+			name: "1BR",
+			color: "#6F6F6F",
+			image: onebrb,
+			bedRoomNumber: "1BR",
+			type: "TYPE B (with balcony)",
+			suite: "441.00 SQ.FT.",
+			balcony: "55.22 SQ.FT.",
+			total: "496.22 SQ.FT",
+		},
+		{
+			name: "2BR",
+			color: "#A2A2A3",
+			image: twobrb,
+			bedRoomNumber: "2BR",
+			type: "TYPE B (with balcony)",
 			suite: "444.66 SQ.FT.",
 			balcony: "55.97 SQ.FT.",
 			total: "500.63 SQ.FT",
@@ -273,7 +273,7 @@ const FloorPlan = () => {
 										dir={i18n.language == "en" ? "" : "rtl"}
 										className=' w-full h-[500px] xl:h-[700px] flex flex-col justify-center items-center'
 									>
-										<p className='text-big font-bold rounded-lg py-1 flex justify-start mt-5'>
+										{/* <p className='text-big font-bold rounded-lg py-1 flex justify-start mt-5'>
 											{t("roomCode")}
 											<span
 												style={{
@@ -282,10 +282,8 @@ const FloorPlan = () => {
 											>
 												{d.name}
 											</span>
-										</p>
-										<p className='font-bold text-bigger'>
-											{d.bedRoomNumber} {t("floorBedroom")}
-										</p>
+										</p> */}
+										<p className='font-bold text-bigger'>{d.bedRoomNumber}</p>
 										<p className='text-white text-med'>{d.type}</p>
 
 										<p className='font-bold text-bigger pt-12'>
