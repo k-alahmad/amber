@@ -21,7 +21,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import emailjs from "@emailjs/browser";
 import Brochure from "../../../assets/pdf/330.pdf";
-
+import { useNavigate } from "react-router-dom";
 const SocialElement = ({ icon, name }) => {
 	return (
 		<div className='flex items-center'>
@@ -76,6 +76,8 @@ function Register({ modal }) {
 			);
 	};
 
+	const navigate = useNavigate();
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		let formData = new FormData(form.current);
@@ -100,6 +102,7 @@ function Register({ modal }) {
 			dispatch(register());
 			dispatch(counterIsFull());
 			dispatch(hideModal());
+			navigate("/thankyou");
 		} catch (error) {
 			console.error("Error here:", error);
 		}

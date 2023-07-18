@@ -19,7 +19,6 @@ const NavBar = () => {
 		{ name: t("Payment"), link: "payment" },
 		{ name: t("Nearby"), link: "nearby" },
 		{ name: t("Floor Plan"), link: "floorPlan" },
-		{ name: t("Location"), link: "location" },
 		{ name: t("Contact Us"), link: "contactus" },
 	];
 

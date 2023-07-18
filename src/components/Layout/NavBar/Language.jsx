@@ -6,12 +6,19 @@ import {
 	MdRadioButtonChecked,
 	MdRadioButtonUnchecked,
 } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 export default function Dropdown() {
 	const { t, i18n } = useTranslation();
 	const [open, setOpen] = useState(false);
+	const navigate = useNavigate();
 	const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
 		localStorage.setItem("lng", lng);
+		if (lng == "en") {
+			navigate("/");
+		} else {
+			navigate(`/${lng}`);
+		}
 	};
 
 	const ref = useRef(null);
