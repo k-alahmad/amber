@@ -83,7 +83,7 @@ function Register({ modal }) {
 		let formData = new FormData(form.current);
 		try {
 			const response = await fetch(
-				"https://hooks.zapier.com/hooks/catch/12792925/3mulj3d/",
+				"https://hooks.zapier.com/hooks/catch/12792925/3mwu9z9/",
 				{
 					method: "POST",
 					body: formData,
