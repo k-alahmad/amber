@@ -10,9 +10,18 @@ import {
 import { TiSocialPinterest } from "react-icons/ti";
 const Footer = () => {
 	return (
-		<div className='grid md:grid-cols-2 bg-[#101314] w-full px-[3%] py-[3%] items-center justify-center justify-items-center  '>
-			<div className='text-base md:text-lg text-offWhite'>
-				<p className='py-4'>2023 AVA REAL ESTATE, LLC. All rights reserved</p>
+		<div className='grid md:grid-cols-3 gap-x-0 bg-[#101314] w-full  px-[3%] py-[3%] items-center justify-center justify-items-center  '>
+			<div className='text-sm text-offWhite items-center justify-center'>
+				<p className='py-2'>
+					2023 AVA REAL ESTATE, LLC.<br></br> All rights reserved
+				</p>
+			</div>
+			<div className='text-sm'>
+				<p className='py-2'>
+					<a href='https://avarealestate.ae/privacy-policy/'>
+						Privacy & Policy
+					</a>
+				</p>
 			</div>
 			<div className='text-base w-[80%] md:w-[50%] text-offWhite '>
 				<div className='flex justify-between px-4 text-2xl '>

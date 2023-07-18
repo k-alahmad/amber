@@ -22,6 +22,7 @@ const Brochure = () => {
 				alt='Brochure'
 				className='md:h-[400px] w-[300px] object-fill col-start-4 col-span-2 -mt-44 lg:hidden'
 			/>
+
 			<div className='text-white lg:grid lg:grid-cols-5 max-lg:py-4'>
 				<div className='self-center space-y-2 col-span-2'>
 					<p className='font-bold tracking-[0.28px] text-med md:text-big xl:text-huge'>
