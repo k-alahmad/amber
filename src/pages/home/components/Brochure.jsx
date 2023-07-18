@@ -13,17 +13,20 @@ const Brochure = () => {
 	const dispatch = useDispatch();
 	const registerState = useSelector(selectRegisterState);
 	return (
-		<div className='bg-[#101314] w-full  px-[10%] flex flex-col justify-center items-center'>
+		<div
+			className='bg-[#101314] w-full  px-[10%] flex flex-col justify-center items-center'
+			dir={i18n.language == "en" ? "ltr" : "rtl"}
+		>
 			<img
 				src={BrochureImg}
 				alt='Brochure'
-				className='h-[400px] w-[300px] object-fill col-start-4 col-span-2 -mt-44 lg:hidden'
+				className='md:h-[400px] w-[300px] object-fill col-start-4 col-span-2 -mt-44 lg:hidden'
 			/>
+			{/* <div className='absolute top-0 -left-4 w-72 h-72 bg-orange-600 rounded-full mix-blend-multiply filter blur-xl'></div>
+			<div className='absolute top-0 -right-4 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl'></div>
+			<div className='absolute -bottom-8 left-20 w-72 h-72 bg-red-700 rounded-full mix-blend-multiply filter blur-xl'></div> */}
 			<div className='text-white lg:grid lg:grid-cols-5 max-lg:py-4'>
-				<div
-					className='self-center space-y-2 col-span-2'
-					dir={i18n.language == "en" ? "ltr" : "rtl"}
-				>
+				<div className='self-center space-y-2 col-span-2'>
 					<p className='font-bold tracking-[0.28px] text-med md:text-big xl:text-huge'>
 						{t("brochurDownload")}
 						{/* Download your Copy of the Brochure */}
@@ -48,7 +51,7 @@ const Brochure = () => {
 				<img
 					src={BrochureImg}
 					alt='Brochure'
-					className=' object-fill col-start-4 col-span-2 -mt-28 hidden lg:block relative'
+					className=' object-fill col-start-4 col-span-2 h-full hidden lg:block relative'
 				/>
 			</div>
 			<div className='h-[1px] w-full bg-gray-500 relative ' />

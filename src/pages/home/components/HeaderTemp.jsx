@@ -98,6 +98,12 @@ const HeaderTemp = () => {
 										: "-translate-x-[3%]"
 								} `}
 							>
+								{/* <div className='absolute top-10 right-0 w-[80%] h-20 bg-yellow-500 rounded-full blur-2xl filter mix-blend-overlay' /> */}
+								{/* <div
+									class='absoulte top-0 mx-auto h-0 w-0 border-r-[250px] border-b-[550px] 
+											border-l-[250px] border-solid border-r-transparent
+											border-l-transparent border-b-[#f3a807] blur-2xl filter mix-blend-overlay'
+								/> */}
 								<div
 									className='px-4 py-8 space-y-4 h-[350px]'
 									dir={i18n.language == "en" ? "ltr" : "rtl"}

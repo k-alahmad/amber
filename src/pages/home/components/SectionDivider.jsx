@@ -4,7 +4,7 @@ import dubai from "../../../assets/images/dubai.webp";
 const SectionDivider = () => {
 	return (
 		<div
-			className='relative w-full h-[600px] justify-center items-center bg-center bg-fixed '
+			className='relative h-[400px] w-full md:h-[600px] justify-center items-center bg-center bg-fixed '
 			style={{
 				backgroundImage: `url(${dubai})`,
 				backgroundRepeat: "no-repeat",
