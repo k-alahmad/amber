@@ -140,7 +140,7 @@ i18n.use(initReactI18next).init({
 				khalifa: "برج خلیفه",
 				jbrbeach: "JBR Beach",
 				burjalarab: "برج العرب",
-				circlemall: "Cicle Mall",
+				circlemall: "Circle Mall",
 				britishschool: "مدرسه بریتانیایی دبی",
 				hospital: "بیمارستان امارات",
 				minutes: "دقیقه",
