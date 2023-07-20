@@ -82,16 +82,16 @@ function Register({ modal }) {
 		e.preventDefault();
 		let formData = new FormData(form.current);
 		try {
-			// const response = await fetch(
-			// 	"https://hooks.zapier.com/hooks/catch/12792925/3mwu9z9/",
-			// 	{
-			// 		method: "POST",
-			// 		body: formData,
-			// 		"Content-Type": "multipart/form-data",
-			// 	},
-			// );
-			// const result = response.json();
-			// console.log("Success:", result);
+			const response = await fetch(
+				"https://hooks.zapier.com/hooks/catch/12792925/3mwu9z9/",
+				{
+					method: "POST",
+					body: formData,
+					"Content-Type": "multipart/form-data",
+				},
+			);
+			const result = response.json();
+			console.log("Success:", result);
 			sendEmail(e);
 			if (downloadState && registerState) {
 				let alink = document.createElement("a");
